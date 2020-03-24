@@ -3,6 +3,7 @@ import React from 'react';
 import Header from './header';
 import './layout.css';
 import SEO from './seo';
+
 const LayoutPageMarkdown = ({ children, pageContext }) => {
   const { title } = pageContext.frontmatter;
 
