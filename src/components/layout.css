@@ -1,9 +1,13 @@
+@tailwind base;
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  @apply antialiased;
 }
 body {
+  @apply bg-gray-400;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -620,3 +624,7 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+
+@tailwind components;
+@tailwind utilities;
