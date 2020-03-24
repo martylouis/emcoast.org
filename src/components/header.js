@@ -17,6 +17,8 @@ const Header = () => {
       <div className="items-center justify-between py-4 md:flex">
         <Link to="/" className="text-lg font-bold leading-none">
           {site.siteMetadata.title}
+          {' '}
+          <span className="font-light">Announcements</span>
         </Link>
         <div className="text-xs text-teal-200">Last Updated: March 23, 2020</div>
       </div>
