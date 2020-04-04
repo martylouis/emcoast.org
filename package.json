@@ -25,6 +25,10 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
     "prettier": "^1.19.1",
     "tailwindcss": "^1.2.0"
   },
