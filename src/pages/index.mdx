@@ -4,6 +4,7 @@ title: Latest Updates
 import ZoomMeeting from '../components/zoom'
 import googlebadge from '../images/download_google.png';
 import zoombuttons from '../images/zoom-buttons.png';
+import CLM_Schedule from '../../static/downloads/CLM_Schedule--20-05-31.pdf';
 
 The following provides helpful information on our current meeting schedules, arrangements for service, and guidelines during the COVID-19 pandemic.
 
@@ -19,11 +20,15 @@ Please follow the instructions provided by your Field Service Group Overseer. He
 
 There are no meetings at the Kingdom Hall until further notice. Instead, congregation meetings will be held online using an audio/video conference service called *Zoom*.
 
-<h3 class="mb-0 text-center">Our Scheduled meetings for each week:</h3>
 
-<div className="items-center mt-2 md:flex md:justify-evenly">
-  <ZoomMeeting day={"Sunday"} time={"10:00 AM"} />
-  <ZoomMeeting day={"Tuesday"} time={"7:00 PM"} />
+<div className="p-4 bg-gray-200 rounded sm:-mx-8">
+  <div className="text-center font-semibold text-lg mt-2">
+    Our meeting times and schedules:
+  </div>
+  <div className="items-center mt-2 md:flex md:justify-evenly">
+    <ZoomMeeting day={"Sunday"} time={"10:00 AM"} />
+    <ZoomMeeting day={"Tuesday"} time={"7:00 PM"} downloadLink={CLM_Schedule} downloadLabel="Schedule" />
+  </div>
 </div>
 
 ### Meeting Invitations
