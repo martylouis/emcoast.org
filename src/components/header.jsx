@@ -21,7 +21,7 @@ const Header = () => {
             {' '}
             <span className="font-light">Announcements</span>
           </Link>
-          <div className="text-xs text-teal-200">Last Updated: May 11, 2020</div>
+          <div className="text-xs text-teal-200">Last Updated: May 19, 2020</div>
         </div>
       </div>
     </header>
