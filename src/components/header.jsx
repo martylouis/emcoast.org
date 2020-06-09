@@ -1,5 +1,6 @@
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import React from 'react';
+import Updated from './updated';
 
 const Header = () => {
   const { site } = useStaticQuery(graphql`
@@ -7,7 +8,6 @@ const Header = () => {
       site {
         siteMetadata {
           title
-
         }
       }
     }
@@ -18,10 +18,8 @@ const Header = () => {
         <div className="items-center justify-between py-4 md:flex">
           <Link to="/" className="text-lg font-bold leading-none">
             {site.siteMetadata.title}
-            {' '}
-            <span className="font-light">Announcements</span>
           </Link>
-          <div className="text-xs text-teal-200">Last Updated: May 19, 2020</div>
+          <Updated />
         </div>
       </div>
     </header>
