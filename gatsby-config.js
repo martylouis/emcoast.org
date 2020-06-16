@@ -9,7 +9,14 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-postcss',
-    'gatsby-plugin-build-date',
+    {
+      resolve: 'gatsby-plugin-build-date',
+      options: {
+        formatting: {
+          format: 'MMM D, YYYY',
+        },
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
