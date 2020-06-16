@@ -16,7 +16,7 @@ const Header = () => {
     <header className="text-white bg-teal-600">
       <div className="container">
         <div className="items-center justify-between py-4 md:flex">
-          <Link to="/" className="text-lg font-bold leading-none">
+          <Link to="/" className="text-2xl font-bold leading-none">
             {site.siteMetadata.title}
           </Link>
           <Updated />
