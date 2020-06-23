@@ -1,7 +1,8 @@
 ---
 title: Announcements
 ---
-import ZoomMeeting from '../components/zoom'
+import DownloadButton from '../components/downloadButton';
+import ZoomMeeting from '../components/zoom';
 import googlebadge from '../images/download_google.png';
 import zoombuttons from '../images/zoom-buttons.png';
 
@@ -38,21 +39,21 @@ There are no meetings at the Kingdom Hall until further notice. Instead, congreg
 
 
 <div className="p-4 bg-gray-200 rounded sm:-mx-8">
-  <div className="text-center font-semibold text-lg mt-2">
+  <h3 className="text-center font-semibold text-lg my-2">
     Our meeting times and schedules:
-  </div>
+  </h3>
   <div className="items-center mt-2 md:flex md:justify-center">
     <ZoomMeeting
-      day={zoomData.sunday.day}
-      time={zoomData.sunday.time}
-      fileName={`${zoomData.sunday.day}-${zoomData.sunday.fileName}`}
-      updated={zoomData.sunday.updated}
+      day={data.sunday.day}
+      time={data.sunday.time}
+      fileName={`${data.sunday.day}-${data.sunday.fileName}`}
+      updated={data.sunday.updated}
     />
     <ZoomMeeting
-      day={zoomData.tuesday.day}
-      time={zoomData.tuesday.time}
-      fileName={`${zoomData.tuesday.day}-${zoomData.tuesday.fileName}`}
-      updated={zoomData.tuesday.updated}
+      day={data.tuesday.day}
+      time={data.tuesday.time}
+      fileName={`${data.tuesday.day}-${data.tuesday.fileName}`}
+      updated={data.tuesday.updated}
     />
   </div>
 </div>
@@ -181,3 +182,13 @@ Feel free to say hello using the chat feature before and after the meeting, but 
 ## Field Service
 
 Features of our public ministry, including the door-to-door work and public witnessing, are discontinued until further instruction is given. Other forms of witnessing that do not require being in close contact with groups of people, such as letter writing, is encouraged.
+
+###  Field Service Groups
+
+<div className="flex mt-4">
+  <DownloadButton
+    text="Download Group List"
+    link={`https://static.martylouis.com/emcoast/${data.fsg.updated}--${data.fsg.fileName}.pdf`}
+    updated={data.fsg.updated}
+  />
+</div>
