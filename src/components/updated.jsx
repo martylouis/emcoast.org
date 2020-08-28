@@ -10,7 +10,7 @@ const Updated = () => {
   }
 `);
   return (
-    <div className="text-xs text-white">
+    <div className="px-2 text-xs font-bold text-teal-800 bg-white rounded">
       Updated:
       {' '}
       {data.currentBuildDate.currentDate}
