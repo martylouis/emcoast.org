@@ -1,42 +1,48 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
+import Link from 'next/link';
+import Head from 'next/head';
+import { NextSeo } from 'next-seo';
+import moment from 'moment';
 
-import PropTypes from "prop-types"
-import React from "react"
-import Header from "./header"
-import "./layout.css"
-
-
-const Layout = ({ children }) => {
-
-
+export default function Layout({ children, buildTimestamp }) {
   return (
     <>
-      <Header />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+      <Head>
+        <link
+          rel="icon"
+          type="img/png"
+          sizes="512x512"
+          href="/img/favicon.png"
+        />
+      </Head>
+      <NextSeo
+        title="Emerald Coast Congregation"
+        description="Latest updates and information on our current meeting schedules and guidelines during the COVID-19 pandemic."
+      />
+      <header className="text-white bg-teal-600">
+        <div className="container">
+          <div className="items-center justify-between py-4 md:flex">
+            <Link href="/">
+              <a className="text-2xl font-bold leading-none">
+                Emerald Coast Congregation
+              </a>
+            </Link>
+            <div className="px-1 text-xs font-bold text-teal-900 bg-teal-100 rounded-sm">
+              Updated: {moment(buildTimestamp).format('MMM Do, YYYY')}
+            </div>
+          </div>
+        </div>
+      </header>
+      <main className="pt-8 pb-24 md:pt-12">
+        <article className="container mdx">{children}</article>
+      </main>
     </>
-  )
+  );
 }
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
-
-export default Layout
+export const getStaticProps = () => {
+  return {
+    props: {
+      buildTimestamp: Date.now(),
+    },
+  };
+};
