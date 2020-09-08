@@ -26,7 +26,7 @@ export default function Layout({ children, buildTimestamp }) {
                 Emerald Coast Congregation
               </a>
             </Link>
-            <div className="px-1 text-xs font-bold text-teal-900 bg-teal-100 rounded-sm">
+            <div className="px-1 text-xs text-teal-900 bg-white rounded-sm">
               Updated: {moment(buildTimestamp).format('MMM Do, YYYY')}
             </div>
           </div>
