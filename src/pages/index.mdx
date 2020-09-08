@@ -1,29 +1,8 @@
----
-title: Announcements
----
-import DownloadButton from '../components/downloadButton';
-import ZoomMeeting from '../components/zoom';
-import googlebadge from '../images/download_google.png';
-import zoombuttons from '../images/zoom-buttons.png';
+import { downloads } from '../data/downloads';
+import ZoomMeeting from '../components/ZoomMeeting';
+import ButtonDownload from '../components/ButtonDownload';
 
-export const data = {
-  sunday: {
-    day: 'Sunday',
-    time: '10:00 AM',
-    fileName: 'Public_Talks',
-    updated: '2020-09-06'
-  },
-  tuesday: {
-    day: 'Tuesday',
-    time: '7:00 PM',
-    fileName: 'Midweek_Meeting',
-    updated: '2020-08-27'
-  },
-  fsg: {
-    fileName: 'Field_Service_Groups',
-    updated: '2020-06-20'
-  }
-}
+# Announcements
 
 The following provides helpful information on our current meeting schedules, arrangements for service, and guidelines during the COVID-19 pandemic.
 
@@ -31,12 +10,11 @@ The following provides helpful information on our current meeting schedules, arr
 
 Please follow the instructions provided by your Field Service Group Overseer. He will have the latest information from the body of elders on congregation activities.
 
-------
+---
 
 ## Meeting Arrangements
 
-There are no meetings at the Kingdom Hall until further notice. Instead, congregation meetings will be held online using an audio/video conference service called *Zoom*.
-
+There are no meetings at the Kingdom Hall until further notice. Instead, congregation meetings will be held online using an audio/video conference service called _Zoom_.
 
 <div className="p-4 bg-gray-200 rounded sm:-mx-8">
   <h3 className="text-center font-semibold text-lg my-2">
@@ -44,37 +22,39 @@ There are no meetings at the Kingdom Hall until further notice. Instead, congreg
   </h3>
   <div className="items-center mt-2 md:flex md:justify-center">
     <ZoomMeeting
-      day={data.sunday.day}
-      time={data.sunday.time}
-      fileName={`${data.sunday.day}-${data.sunday.fileName}`}
-      updated={data.sunday.updated}
+      data={downloads}
+      day={downloads.sunday.day}
+      time={downloads.sunday.time}
+      fileName={`${downloads.sunday.day}-${downloads.sunday.fileName}`}
+      updated={downloads.sunday.updated}
     />
     <ZoomMeeting
-      day={data.tuesday.day}
-      time={data.tuesday.time}
-      fileName={`${data.tuesday.day}-${data.tuesday.fileName}`}
-      updated={data.tuesday.updated}
+      data={downloads}
+      day={downloads.tuesday.day}
+      time={downloads.tuesday.time}
+      fileName={`${downloads.tuesday.day}-${downloads.tuesday.fileName}`}
+      updated={downloads.tuesday.updated}
     />
   </div>
 </div>
 
 ### Meeting Invitations
 
-Please see your Field Service Group Overseer for the *Zoom* meeting invitation link. This link will be sent via e-mail or text message.
+Please see your Field Service Group Overseer for the _Zoom_ meeting invitation link. This link will be sent via e-mail or text message.
 
-------
+---
 
 ## How to Join our Meetings on Zoom
 
-It is best to download the appropriate mobile app or desktop application to your device or computer before joining a *Zoom* meeting for the first time. ***It is not necessary for you to create an account with Zoom to join a meeting.*** There are multiple ways to join a meeting, here are the following options:
+It is best to download the appropriate mobile app or desktop application to your device or computer before joining a _Zoom_ meeting for the first time. **_It is not necessary for you to create an account with Zoom to join a meeting._** There are multiple ways to join a meeting, here are the following options:
 
 ### Option 1: Join with a Computer
 
-Once you click on the *Zoom* link, you will be directed to open the application or download the application to your computer. You can also download directly from here: https://zoom.us/download.
+Once you click on the _Zoom_ link, you will be directed to open the application or download the application to your computer. You can also download directly from here: https://zoom.us/download.
 
-### Option 2: Join by mobile device on the *Zoom* app
+### Option 2: Join by mobile device on the _Zoom_ app
 
-Download the *Zoom* app to your mobile phone or tablet here:
+Download the _Zoom_ app to your mobile phone or tablet here:
 
 <div className="sm:flex">
   <a
@@ -85,7 +65,8 @@ Download the *Zoom* app to your mobile phone or tablet here:
     style={{
       display: 'inline-block',
       overflow: 'hidden',
-      background: 'url(https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2012-08-15&kind=iossoftware&bubble=apple_music) no-repeat',
+      background:
+        'url(https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2012-08-15&kind=iossoftware&bubble=apple_music) no-repeat',
       width: '135px',
       height: '40px',
     }}
@@ -97,7 +78,7 @@ Download the *Zoom* app to your mobile phone or tablet here:
     rel="noopener noreferrer"
     style={{ width: '135px' }}
   >
-    <img src={googlebadge} alt="download from google play" />
+    <img src="/img/download_google.png" alt="download from google play" />
   </a>
 </div>
 
@@ -114,29 +95,33 @@ When asked for your name, please enter your full name or your family name.
 
 <div className="p-8 border-2 border-orange-300 bg-orange-100 rounded sm:-mx-8">
   <div>
-    <h4 className="-mt-2">
-      Having Technical Issues?
-    </h4>
+    <h4 className="-mt-2">Having Technical Issues?</h4>
     <p>
-      Zoom has an excellent online support website with video tutorials that can help you get setup: <a href="https://support.zoom.us/hc/en-us/articles/201362193-Joining-a-Meeting">Zoom Help Center: Joining a Meeting</a>
+      Zoom has an excellent online support website with video tutorials that can
+      help you get setup:{' '}
+      <a href="https://support.zoom.us/hc/en-us/articles/201362193-Joining-a-Meeting">
+        Zoom Help Center: Joining a Meeting
+      </a>
     </p>
   </div>
 </div>
 
 ### The Buttons
 
-Please familiarize yourself with the *Zoom* software, so you can join successfully, operate your audio and video, and be able to raise your hand to comment.
+Please familiarize yourself with the _Zoom_ software, so you can join successfully, operate your audio and video, and be able to raise your hand to comment.
 
-<img src={zoombuttons} alt="Buttons" />
+![Zoom Buttons](/img/zoom-buttons.png)
 
 ### When attending the meeting
 
 #### Attendance
 
 - If there are multiple people with you, please include the number of attendees next to your name. For example:
+
 ```txt
 Jack & Jill Friendly (2)
 ```
+
 - If possible, family members living in the same home should join together on one device
 
 #### Dress
@@ -159,13 +144,13 @@ Sharing in the meeting will be a great encouragement to the congregation! Please
 
 - **When you would like to comment via the app:**
 
-  + Depending on your device: Select **“Participants”** or **“More”**
-  + Select **“Raise Hand”**
-  + When you’re called on, unmute yourself and give your comment
-  + After your comment, please lower your hand and put yourself back on mute
+  - Depending on your device: Select **“Participants”** or **“More”**
+  - Select **“Raise Hand”**
+  - When you’re called on, unmute yourself and give your comment
+  - After your comment, please lower your hand and put yourself back on mute
 
 - **Commenting on the phone:**
-  + Dial `*9` if you’d like to raise your hand to comment
+  - Dial `*9` if you’d like to raise your hand to comment
 
 #### Chat Feature
 
@@ -178,18 +163,18 @@ Feel free to say hello using the chat feature before and after the meeting, but 
 - If you are instructed to play a video for your part, the audio/video support brother will play the video for you
 - When your assignment is completed, please mute yourself
 
-----------
+---
 
 ## Field Service
 
 Features of our public ministry, including the door-to-door work and public witnessing, are discontinued until further instruction is given. Other forms of witnessing that do not require being in close contact with groups of people, such as letter writing, is encouraged.
 
-###  Field Service Groups
+### Field Service Groups
 
 <div className="flex mt-4">
-  <DownloadButton
+  <ButtonDownload
     text="Download Group List"
-    link={`https://static.martylouis.com/emcoast/${data.fsg.updated}--${data.fsg.fileName}.pdf`}
-    updated={data.fsg.updated}
+    link={`https://static.martylouis.com/emcoast/${downloads.fsg.updated}--${downloads.fsg.fileName}.pdf`}
+    updated={downloads.fsg.updated}
   />
 </div>
