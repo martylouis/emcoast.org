@@ -2,7 +2,8 @@ import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 import moment from 'moment';
 
-export default function Layout({ children, buildTimestamp }) {
+export default function Layout({ children }) {
+  const buildTimestamp = Date.now();
   return (
     <>
       <Head>
@@ -33,11 +34,3 @@ export default function Layout({ children, buildTimestamp }) {
     </>
   );
 }
-
-export const getStaticProps = () => {
-  return {
-    props: {
-      buildTimestamp: Date.now(),
-    },
-  };
-};
