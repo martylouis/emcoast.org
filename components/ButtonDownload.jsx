@@ -4,7 +4,7 @@ const DownloadButton = ({ link, text, updated }) => (
   <div>
     <a
       href={link}
-      className="flex items-center justify-center h-10 px-4 mt-4 text-sm font-bold leading-none text-white bg-teal-600 rounded hover:bg-teal-700"
+      className="inline-flex items-center justify-center h-10 px-4 mt-4 text-sm font-bold leading-none text-white whitespace-no-wrap bg-teal-600 rounded hover:bg-teal-700"
       rel="noopener noreferrer"
       target="_blank"
       download

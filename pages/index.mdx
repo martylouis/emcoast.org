@@ -2,25 +2,24 @@ import { downloads } from '../data/downloads';
 import ZoomMeeting from '../components/ZoomMeeting';
 import ButtonDownload from '../components/ButtonDownload';
 
-# Announcements
-
-The following provides helpful information on our current meeting schedules, arrangements for service, and guidelines during the COVID-19 pandemic.
+<p className="text-lg">
+  Latest updates and information on current meeting schedules and arrangements
+  for service during the COVID-19 pandemic.
+</p>
 
 ### General Reminders
 
 Please follow the instructions provided by your Field Service Group Overseer. He will have the latest information from the body of elders on congregation activities.
 
----
-
 ## Meeting Arrangements
 
 There are no meetings at the Kingdom Hall until further notice. Instead, congregation meetings will be held online using an audio/video conference service called _Zoom_.
 
-<div className="p-4 bg-gray-200 rounded sm:-mx-8">
+<div className="mt-8">
   <h3 className="text-center font-semibold text-lg my-2">
-    Our meeting times and schedules:
+    Our Zoom meeting times and schedules:
   </h3>
-  <div className="items-center mt-2 md:flex md:justify-center">
+  <div className="mt-2 sm:flex md:justify-between">
     <ZoomMeeting
       data={downloads}
       day={downloads.sunday.day}
@@ -36,27 +35,32 @@ There are no meetings at the Kingdom Hall until further notice. Instead, congreg
       updated={downloads.tuesday.updated}
     />
   </div>
+  <p className="text-center text-sm m-0">
+    Meeting times are shown in Central Time (CT)
+  </p>
 </div>
 
-### Meeting Invitations
+### Zoom Meeting Invitations
 
 Please see your Field Service Group Overseer for the _Zoom_ meeting invitation link. This link will be sent via e-mail or text message.
 
----
+### Zoom Meeting: How to Join
 
-## How to Join our Meetings on Zoom
+It is best to download the appropriate mobile app or desktop application to your device or computer before joining a _Zoom_ meeting for the first time. **_It is not necessary for you to create an account with Zoom to join a meeting._**
 
-It is best to download the appropriate mobile app or desktop application to your device or computer before joining a _Zoom_ meeting for the first time. **_It is not necessary for you to create an account with Zoom to join a meeting._** There are multiple ways to join a meeting, here are the following options:
+There are multiple ways to join a meeting, here are the following options:
 
-### Option 1: Join with a Computer
+1. **Join with a Computer:** Once you receive your invitation, click on the _Zoom_ link, and you will be directed to open the application or download the application to your computer. You can also download here:
 
-Once you click on the _Zoom_ link, you will be directed to open the application or download the application to your computer. You can also download directly from here: https://zoom.us/download.
+<div className="ml-8" style={{ width: '180px' }}>
+  <a href="https://zoom.us/download" target="_blank" rel="noopener noreferrer">
+    <img className="max-w-full" src="/img/zoom-logo-transparent.png" alt="" />
+  </a>
+</div>
 
-### Option 2: Join by mobile device on the _Zoom_ app
+2. **Join with a mobile device on the _Zoom_ app:** Download the _Zoom_ app to your mobile phone or tablet here:
 
-Download the _Zoom_ app to your mobile phone or tablet here:
-
-<div className="sm:flex">
+<div className="sm:flex ml-8 my-8">
   <a
     href="https://apps.apple.com/us/app/zoom-cloud-meetings/id546505307?mt=8"
     className="block m-2"
@@ -70,7 +74,9 @@ Download the _Zoom_ app to your mobile phone or tablet here:
       width: '135px',
       height: '40px',
     }}
-  ></a>
+  >
+    <span className="sr-only">Download Zoom on the Apple Store</span>
+  </a>
   <a
     href="https://play.google.com/store/apps/details?id=us.zoom.videomeetings&hl=en_US"
     className="block m-2"
@@ -82,20 +88,14 @@ Download the _Zoom_ app to your mobile phone or tablet here:
   </a>
 </div>
 
-### Option 3: Join by Phone
-
-If you can’t get the app to work, you can call in with the phone number and Meeting ID.
+3. **Join by Phone:** Call in with the phone number and Meeting ID.
 
 - Press `*6` to mute/unmute
 - Press `*9` if you’d like to comment
 
-### Identify Yourself
-
-When asked for your name, please enter your full name or your family name.
-
-<div className="p-8 border-2 border-orange-300 bg-orange-100 rounded sm:-mx-8">
+<div className="p-6 mt-12 border border-gray-400 bg-gray-200 rounded-lg">
   <div>
-    <h4 className="-mt-2">Having Technical Issues?</h4>
+    <h4 className="-mt-2 font-bold">Having Technical Issues?</h4>
     <p>
       Zoom has an excellent online support website with video tutorials that can
       help you get setup:{' '}
@@ -106,23 +106,24 @@ When asked for your name, please enter your full name or your family name.
   </div>
 </div>
 
-### The Buttons
+### Zoom Meeting: When Attending
 
-Please familiarize yourself with the _Zoom_ software, so you can join successfully, operate your audio and video, and be able to raise your hand to comment.
+#### Identify Yourself
 
-![Zoom Buttons](/img/zoom-buttons.png)
-
-### When attending the meeting
-
-#### Attendance
+When asked for your name, please enter your full name or your family name.
 
 - If there are multiple people with you, please include the number of attendees next to your name. For example:
 
-```txt
-Jack & Jill Friendly (2)
-```
+  - `Jack & Jill Friendly (2)`
+  - `The Joy’s (4)`
 
 - If possible, family members living in the same home should join together on one device
+
+#### The Buttons
+
+Please familiarize yourself with _Zoom_, so you can join successfully, operate your audio and video, and be able to raise your hand to comment.
+
+![Zoom Buttons](/img/zoom-buttons.png)
 
 #### Dress
 
@@ -156,22 +157,20 @@ Sharing in the meeting will be a great encouragement to the congregation! Please
 
 Feel free to say hello using the chat feature before and after the meeting, but please don’t use it during the meeting.
 
-### Presenting a Student Assignment
+### Presenting a part or demonstration
 
-- Before your student assignment begins, please make sure your video is enabled and that you can see your assistant on the screen
-- When the chairman introduces your part, both you and your assistant should unmute your microphones and begin speaking
+- Before part begins, please make sure your video is enabled
+- When the chairman introduces your part, you should unmute your mic and begin speaking
 - If you are instructed to play a video for your part, the audio/video support brother will play the video for you
 - When your assignment is completed, please mute yourself
 
----
-
-## Field Service
+## Field Service Arrangements
 
 Features of our public ministry, including the door-to-door work and public witnessing, are discontinued until further instruction is given. Other forms of witnessing that do not require being in close contact with groups of people, such as letter writing, is encouraged.
 
 ### Field Service Groups
 
-<div className="flex mt-4">
+<div className="flex">
   <ButtonDownload
     text="Download Group List"
     link={`https://static.martylouis.com/emcoast/${downloads.fsg.updated}--${downloads.fsg.fileName}.pdf`}

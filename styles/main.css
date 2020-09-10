@@ -2,7 +2,7 @@
 
 /* Base styles */
 body {
-  @apply antialiased text-gray-700 bg-white;
+  @apply antialiased text-gray-800 bg-gray-100;
 }
 
 a {
@@ -10,15 +10,15 @@ a {
 }
 
 article > * + * {
-  @apply mt-6;
+  @apply mt-4;
 }
 
 hr {
-  @apply my-16 border-t border-gray-300;
+  @apply my-8 border-t border-gray-300;
 }
 
 p {
-  @apply mt-6;
+  @apply mt-4;
 }
 
 p a {
@@ -34,31 +34,31 @@ h2,
 h3,
 h4,
 h5 {
-  @apply text-gray-800;
+  @apply text-gray-900;
 }
 
 h1 {
-  @apply my-4 text-4xl font-light leading-tight;
+  @apply my-4 text-4xl font-extrabold leading-tight;
 }
 
 h2 {
-  @apply mt-16 mb-4 text-2xl font-medium leading-none;
+  @apply mt-16 mb-4 text-2xl font-bold leading-none;
 }
 
 h3 {
-  @apply mt-12 -mb-4 text-lg font-bold;
+  @apply mt-12 text-lg font-semibold;
 }
 
 h4 {
-  @apply mt-6 -mb-4 font-bold;
-}
-
-h5 {
-  @apply my-1 mt-2 -mb-4 font-bold;
+  @apply mt-6 font-semibold;
 }
 
 ul {
   @apply ml-8 list-disc;
+}
+
+ol {
+  @apply ml-8 list-decimal;
 }
 
 ul > * + *,

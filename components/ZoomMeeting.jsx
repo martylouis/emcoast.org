@@ -1,11 +1,11 @@
 import ButtonDownload from './ButtonDownload';
 
 const ZoomMeeting = ({ day, time, fileName, updated }) => (
-  <div className="w-auto px-8 py-6 mx-auto my-4 text-center bg-white border border-gray-300 rounded shadow-2xl">
-    <div className="text-xl font-medium leading-none text-teal-600 uppercase">
+  <div className="w-64 px-6 py-4 mx-auto my-8 bg-white border border-gray-300 rounded-lg shadow-md md:my-4">
+    <div className="pt-1 text-lg font-bold leading-none tracking-wide uppercase">
       {day}
     </div>
-    <div className="mt-2 text-3xl font-extrabold leading-none tracking-tighter text-teal-800">
+    <div className="mt-2 text-3xl font-extrabold leading-none tracking-tighter">
       {time}
     </div>
     {fileName && updated ? (
@@ -15,7 +15,7 @@ const ZoomMeeting = ({ day, time, fileName, updated }) => (
         updated={updated}
       />
     ) : (
-        <div>Coming Soon</div>
+        <div>Schedule Coming Soon</div>
       )}
   </div>
 );
