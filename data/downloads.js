@@ -3,7 +3,7 @@ export const downloads = {
     day: 'Sunday',
     time: '10:00 AM',
     fileName: 'Public_Talks',
-    updated: '2020-09-06',
+    updated: '2020-10-05',
   },
   tuesday: {
     day: 'Tuesday',

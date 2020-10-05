@@ -3,7 +3,7 @@ import { NextSeo } from 'next-seo';
 import moment from 'moment';
 
 export default function Layout({ children }) {
-  const buildTimestamp = '2020-09-06';
+  const buildTimestamp = '2020-10-05';
   return (
     <>
       <Head>
