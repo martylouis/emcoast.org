@@ -1,4 +1,4 @@
-import { downloads } from '../data/downloads';
+import { sunday, tuesday, fsg } from '../data/downloads';
 import ZoomMeeting from '../components/ZoomMeeting';
 import ButtonDownload from '../components/ButtonDownload';
 
@@ -21,24 +21,25 @@ There are no meetings at the Kingdom Hall until further notice. Instead, congreg
   </h3>
   <div className="mt-2 sm:flex md:justify-between">
     <ZoomMeeting
-      data={downloads}
-      day={downloads.sunday.day}
-      time={downloads.sunday.time}
-      fileName={`${downloads.sunday.day}-${downloads.sunday.fileName}`}
-      updated={downloads.sunday.updated}
+      day={sunday.day}
+      time={sunday.time}
+      fileName={`${sunday.fileName}`}
+      updated={sunday.updated}
     />
     <ZoomMeeting
-      data={downloads}
-      day={downloads.tuesday.day}
-      time={downloads.tuesday.time}
-      fileName={`${downloads.tuesday.day}-${downloads.tuesday.fileName}`}
-      updated={downloads.tuesday.updated}
+      day={tuesday.day}
+      time={tuesday.time}
+      fileName={`${tuesday.fileName}`}
+      updated={tuesday.updated}
     />
+
+
   </div>
   <p className="text-center text-sm m-0">
     Meeting times are shown in Central Time (CT)
   </p>
 </div>
+
 
 ### Zoom Meeting Invitations
 
@@ -173,7 +174,7 @@ Features of our public ministry, including the door-to-door work and public witn
 <div className="flex">
   <ButtonDownload
     text="Download Group List"
-    link={`https://static.martylouis.com/emcoast/${downloads.fsg.updated}--${downloads.fsg.fileName}.pdf`}
-    updated={downloads.fsg.updated}
+    link={`https://static.martylouis.com/emcoast/${fsg.fileName}--${fsg.updated}.pdf`}
+    updated={fsg.updated}
   />
 </div>

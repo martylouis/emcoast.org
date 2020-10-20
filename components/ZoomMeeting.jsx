@@ -10,7 +10,7 @@ const ZoomMeeting = ({ day, time, fileName, updated }) => (
     </div>
     {fileName && updated ? (
       <ButtonDownload
-        link={`https://static.martylouis.com/emcoast/${updated}--${fileName}.pdf`}
+        link={`https://static.martylouis.com/emcoast/${fileName}--${updated}.pdf`}
         text="Download Schedule"
         updated={updated}
       />
