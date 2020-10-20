@@ -1,4 +1,5 @@
 module.exports = {
+  updated: '2020-10-20',
   sunday: {
     day: 'Sunday',
     time: '10:00 AM',

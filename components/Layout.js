@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 import moment from 'moment';
+import { updated } from '../data/downloads';
 
 export default function Layout({ children }) {
-  const buildTimestamp = '2020-10-05';
   return (
     <>
       <Head>
@@ -24,7 +24,7 @@ export default function Layout({ children }) {
             Emerald Coast Congregation Announcements
           </h1>
           <p className="inline-block px-1 mt-0 mb-2 text-xs font-bold text-teal-900 bg-teal-200 rounded">
-            Updated: {moment(buildTimestamp).format('MMM Do, YYYY')}
+            Updated: {moment(updated).format('MMM Do, YYYY')}
           </p>
         </div>
       </header>
