@@ -15,8 +15,8 @@ const ZoomMeeting = ({ day, time, fileName, updated }) => (
         updated={updated}
       />
     ) : (
-        <div>Schedule Coming Soon</div>
-      )}
+      <div>Schedule Coming Soon</div>
+    )}
   </div>
 );
 

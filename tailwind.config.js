@@ -1,9 +1,12 @@
 module.exports = {
-  purge: ['./components/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx,md,mdx}'],
+  purge: [
+    './components/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx,md,mdx}',
+  ],
   theme: {
     container: {
       center: true,
-      padding: '1.5rem'
+      padding: '1.5rem',
     },
   },
   variants: {},
@@ -11,4 +14,4 @@ module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
   },
-}
+};
