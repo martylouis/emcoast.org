@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
-import moment from 'moment';
+import dayjs from 'dayjs';
 import { updated } from '../data/downloads';
 
 export default function Layout({ children }) {
@@ -24,7 +24,7 @@ export default function Layout({ children }) {
             Emerald Coast Congregation Announcements
           </h1>
           <p className="inline-block px-1 mt-0 mb-2 text-xs font-bold text-teal-900 bg-teal-200 rounded">
-            Updated: {moment(updated).format('MMM Do, YYYY')}
+            Updated: {dayjs(updated).format('MMM D, YYYY')}
           </p>
         </div>
       </header>
