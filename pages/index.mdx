@@ -1,6 +1,7 @@
 import { sunday, tuesday, fsg } from '../data/downloads';
 import ZoomMeeting from '../components/ZoomMeeting';
 import ButtonDownload from '../components/ButtonDownload';
+import Image from 'next/image';
 
 <p className="text-lg">
   Latest updates and information on current meeting schedules and arrangements
@@ -55,7 +56,12 @@ There are multiple ways to join a meeting, here are the following options:
 
 <div className="ml-8" style={{ width: '180px' }}>
   <a href="https://zoom.us/download" target="_blank" rel="noopener noreferrer">
-    <img className="max-w-full" src="/img/zoom-logo-transparent.png" alt="" />
+    <Image
+      src="/img/zoom-logo-transparent.png"
+      width="626"
+      height="339"
+      alt="download zoom"
+    />
   </a>
 </div>
 
@@ -85,7 +91,12 @@ There are multiple ways to join a meeting, here are the following options:
     rel="noopener noreferrer"
     style={{ width: '135px' }}
   >
-    <img src="/img/download_google.png" alt="download from google play" />
+    <Image
+      src="/img/download_google.png"
+      alt="download google"
+      width="564"
+      height="168"
+    />
   </a>
 </div>
 
@@ -124,7 +135,12 @@ When asked for your name, please enter your full name or your family name.
 
 Please familiarize yourself with _Zoom_, so you can join successfully, operate your audio and video, and be able to raise your hand to comment.
 
-![Zoom Buttons](/img/zoom-buttons.png)
+<Image
+  src="/img/zoom-controls.png"
+  width="1020"
+  height="540"
+  alt="Zoom Buttons"
+/>
 
 #### Dress
 
