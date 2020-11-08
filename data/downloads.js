@@ -1,10 +1,10 @@
 module.exports = {
-  updated: '2020-10-29',
+  updated: '2020-11-08',
   sunday: {
     day: 'Sunday',
     time: '10:00 AM',
     fileName: 'Schedule_PT',
-    updated: '2020-10-29',
+    updated: '2020-11-08',
   },
   tuesday: {
     day: 'Tuesday',
