@@ -10,7 +10,7 @@ module.exports = {
     day: 'Tuesday',
     time: '7:00 PM',
     fileName: 'Schedule_CLM',
-    updated: '2020-10-20',
+    updated: '2020-11-26',
   },
   fsg: {
     fileName: 'EC-FSG',
