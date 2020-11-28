@@ -21,6 +21,6 @@ module.exports = {
   },
   meeting_alert: {
     display: true,
-    text: 'No Midweek Meeting for the week of Dec 13, 2020',
+    text: 'No Midweek Meeting for the week of Dec 7, 2020',
   },
 };
