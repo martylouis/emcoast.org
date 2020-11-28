@@ -1,6 +1,6 @@
-import Card from './Card';
-import ButtonDownload from './ButtonDownload';
-import Timestamp from './Timestamp';
+import Card from '@components/Card';
+import ButtonDownload from '@components/ButtonDownload';
+import Timestamp from '@components/Timestamp';
 
 const ZoomMeeting = ({ title, day, time, fileName, updated }) => {
   const static_src_url = 'https://static.martylouis.com/emcoast/';
