@@ -38,7 +38,7 @@ h5 {
 }
 
 h1 {
-  @apply my-4 text-4xl font-extrabold leading-tight;
+  @apply my-4 text-3xl font-extrabold leading-none;
 }
 
 h2 {
@@ -86,7 +86,6 @@ code {
 .container {
   @apply max-w-2xl;
 }
-
 
 /* Start purging... */
 @tailwind utilities;
