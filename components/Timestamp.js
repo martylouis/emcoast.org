@@ -46,7 +46,7 @@ export function TimestampNotifyDot({ color }) {
 export function TimestampUpdate({ dateTime, color, children }) {
   return (
     <div
-      className={`text-xs tracking-wide leading-none font-bold text-${color}-600`}
+      className={`text-sm tracking-wide leading-none font-bold text-${color}-600`}
     >
       Updated <time dateTime={dateTime}>{children}</time>
     </div>

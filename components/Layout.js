@@ -19,7 +19,9 @@ export default function Layout({ children }) {
       />
       <header className="pt-4 md:pt-16">
         <div className="container">
-          <h1>Emerald Coast Congregation</h1>
+          <h1 className="leading-tight">
+            Emerald Coast Congregation Annoucements
+          </h1>
         </div>
       </header>
       <main className="pb-32">
