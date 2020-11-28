@@ -1,23 +1,54 @@
+import Card from './Card';
 import ButtonDownload from './ButtonDownload';
+import Timestamp from './Timestamp';
 
-const ZoomMeeting = ({ day, time, fileName, updated }) => (
-  <div className="w-64 px-6 py-4 mx-auto my-8 bg-white border border-gray-300 rounded-lg shadow-md md:my-4">
-    <div className="pt-1 text-lg font-bold leading-none tracking-wide uppercase">
-      {day}
-    </div>
-    <div className="mt-2 text-3xl font-extrabold leading-none tracking-tighter">
-      {time}
-    </div>
-    {fileName && updated ? (
-      <ButtonDownload
-        link={`https://static.martylouis.com/emcoast/${fileName}--${updated}.pdf`}
-        text="Download Schedule"
-        updated={updated}
-      />
-    ) : (
-      <div>Schedule Coming Soon</div>
-    )}
-  </div>
-);
+const ZoomMeeting = ({ title, day, time, fileName, updated }) => {
+  const static_src_url = 'https://static.martylouis.com/emcoast/';
+  const download_link = `${static_src_url}${fileName}--${updated}.pdf`;
+  return (
+    <Card>
+      <div>
+        {day && time ? (
+          <div className="inline-flex items-center text-gray-700">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="w-4 h-4 mr-1"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+              />
+            </svg>
+            <span className="text-sm">
+              {day} at {time} CT
+            </span>
+          </div>
+        ) : (
+          ''
+        )}
+        <div className="mb-2 text-xl font-bold leading-tight">{title}</div>
+        <div className="mb-4 sm:mb-1">
+          <Timestamp date={updated} />
+        </div>
+      </div>
+      {fileName && updated ? (
+        <div className="sm:ml-8">
+          <ButtonDownload
+            link={download_link}
+            text="Download"
+            updated={updated}
+          />
+        </div>
+      ) : (
+        <div>Schedule Coming Soon</div>
+      )}
+    </Card>
+  );
+};
 
 export default ZoomMeeting;

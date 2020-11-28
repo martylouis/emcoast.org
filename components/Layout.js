@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 import dayjs from 'dayjs';
-import { updated } from '../data/downloads';
 
 export default function Layout({ children }) {
   return (
@@ -20,12 +19,7 @@ export default function Layout({ children }) {
       />
       <header className="pt-4 md:pt-16">
         <div className="container">
-          <h1 className="leading-10">
-            Emerald Coast Congregation Announcements
-          </h1>
-          <p className="inline-block px-1 mt-0 mb-2 text-xs font-bold text-teal-900 bg-teal-200 rounded">
-            Updated: {dayjs(updated).format('MMM D, YYYY')}
-          </p>
+          <h1>Emerald Coast Congregation</h1>
         </div>
       </header>
       <main className="pb-32">
