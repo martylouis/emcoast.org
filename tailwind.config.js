@@ -8,6 +8,9 @@ module.exports = {
       center: true,
       padding: '1.5rem',
     },
+    fontFamily: {
+      sans: ['Inter', 'sans-serif'],
+    },
   },
   variants: {},
   plugins: [],
