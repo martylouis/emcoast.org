@@ -14,7 +14,7 @@ export default function Timestamp({ date }) {
   let isSevenDaysAgoOrLess = getDaysDiff <= 7;
 
   return isSevenDaysAgoOrLess ? (
-    <TimestampNotify dateTime={date} color="green" classes="font-bold">
+    <TimestampNotify dateTime={date} color="teal">
       {dayjs(localDateUTC).fromNow()}
     </TimestampNotify>
   ) : (
@@ -24,7 +24,7 @@ export default function Timestamp({ date }) {
   );
 }
 
-export function TimestampNotify({ dateTime, color, classes, children }) {
+export function TimestampNotify({ dateTime, color, children }) {
   return (
     <div className="flex items-center">
       <TimestampNotifyDot color={color} />
@@ -43,10 +43,10 @@ export function TimestampNotifyDot({ color }) {
   );
 }
 
-export function TimestampUpdate({ dateTime, color, classes, children }) {
+export function TimestampUpdate({ dateTime, color, children }) {
   return (
     <div
-      className={`text-xs tracking-wide leading-none font-bold text-${color}-600 ${classes}`}
+      className={`text-xs tracking-wide leading-none font-bold text-${color}-600`}
     >
       Updated <time dateTime={dateTime}>{children}</time>
     </div>

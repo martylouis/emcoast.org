@@ -1,8 +1,18 @@
 module.exports = {
-  purge: [
-    './components/**/*.{js,ts,jsx,tsx}',
-    './pages/**/*.{js,ts,jsx,tsx,md,mdx}',
-  ],
+  purge: {
+    content: [
+      './components/**/*.{js,ts,jsx,tsx}',
+      './pages/**/*.{js,ts,jsx,tsx,md,mdx}',
+    ],
+    options: {
+      whitelist: [
+        'text-teal-600',
+        'border-teal-600',
+        'text-gray-600',
+        'border-teal-600',
+      ],
+    },
+  },
   theme: {
     container: {
       center: true,
