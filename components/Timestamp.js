@@ -1,34 +1,54 @@
 import dayjs from 'dayjs';
 import * as relativeTime from 'dayjs/plugin/relativeTime';
+import * as utc from 'dayjs/plugin/utc';
 
 dayjs.extend(relativeTime);
+dayjs.extend(utc);
 
-const today = new Date();
+const now = new Date();
 
 export default function Timestamp({ date }) {
-  // If date is less than 5 days show alert, otherwise just show regular timestamp
+  let localDateUTC = dayjs.utc(date).utcOffset(16);
 
-  let getDaysDiff = dayjs(today).diff(date, 'day');
+  let getDaysDiff = dayjs(now).diff(date, 'day');
   let isSevenDaysAgoOrLess = getDaysDiff <= 7;
 
   return isSevenDaysAgoOrLess ? (
-    <Notify>
-      Updated <time dateTime={date}>{dayjs(date).fromNow()}</time>
-    </Notify>
+    <TimestampNotify dateTime={date} color="green" classes="font-bold">
+      {dayjs(localDateUTC).fromNow()}
+    </TimestampNotify>
   ) : (
-    <div className="text-xs font-medium text-gray-600">
-      Updated <time dateTime={date}>{dayjs(date).format('MMM D, YYYY')}</time>
+    <TimestampUpdate dateTime={date} color="gray">
+      {dayjs(localDateUTC).format('MMM D, YYYY')}
+    </TimestampUpdate>
+  );
+}
+
+export function TimestampNotify({ dateTime, color, classes, children }) {
+  return (
+    <div className="flex items-center">
+      <TimestampNotifyDot color={color} />
+      <TimestampUpdate dateTime={dateTime} color={color}>
+        {children}
+      </TimestampUpdate>
     </div>
   );
 }
 
-export function Notify({ children }) {
+export function TimestampNotifyDot({ color }) {
   return (
-    <div className="flex">
-      <div className="flex items-center text-xs font-bold leading-none text-green-600">
-        <div className="w-2 h-2 mr-1 border-4 border-green-600 rounded-full"></div>
-        <div>{children}</div>
-      </div>
+    <div
+      className={`w-2 h-2 mr-1 border-4 border-${color}-600 rounded-full`}
+    ></div>
+  );
+}
+
+export function TimestampUpdate({ dateTime, color, classes, children }) {
+  return (
+    <div
+      className={`text-xs tracking-wide leading-none font-bold text-${color}-600 ${classes}`}
+    >
+      Updated <time dateTime={dateTime}>{children}</time>
     </div>
   );
 }
