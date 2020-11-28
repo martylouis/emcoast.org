@@ -7,7 +7,7 @@ import {
 } from '@data/downloads';
 import Alert from '@components/Alert';
 import Timestamp from '@components/Timestamp';
-import ZoomMeeting from '@components/ZoomMeeting';
+import Download from '@components/Download';
 import ButtonDownload from '@components/ButtonDownload';
 import Image from 'next/image';
 
@@ -21,14 +21,14 @@ Please follow the instructions provided by your Field Service Group Overseer. He
 
 <Alert display={meeting_alert.display} children={meeting_alert.text} />
 
-<ZoomMeeting
+<Download
   title={sunday.title}
   day={sunday.day}
   time={sunday.time}
   fileName={`${sunday.fileName}`}
   updated={sunday.updated}
 />
-<ZoomMeeting
+<Download
   title={tuesday.title}
   day={tuesday.day}
   time={tuesday.time}
@@ -183,4 +183,4 @@ Feel free to say hello using the chat feature before and after the meeting, but 
 
 Features of our public ministry, including the door-to-door work and public witnessing, are discontinued until further instruction is given. Other forms of witnessing that do not require being in close contact with groups of people, such as letter writing, is encouraged.
 
-<ZoomMeeting title={fsg.title} fileName={fsg.fileName} updated={fsg.updated} />
+<Download title={fsg.title} fileName={fsg.fileName} updated={fsg.updated} />
