@@ -17,7 +17,7 @@ export default function Layout({ children }) {
         title="Emerald Coast Congregation"
         description="Latest updates and information on current arrangements during the COVID-19 pandemic."
       />
-      <header className="pt-4 md:pt-16">
+      <header className="pt-4">
         <div className="container">
           <h1 className="leading-tight">
             Emerald Coast Congregation Annoucements
@@ -25,7 +25,7 @@ export default function Layout({ children }) {
         </div>
       </header>
       <main className="pb-32">
-        <article className="container mdx">{children}</article>
+        <article className="container">{children}</article>
       </main>
     </>
   );

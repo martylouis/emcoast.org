@@ -1,80 +1,74 @@
-body {
-  @apply antialiased text-gray-800 bg-gray-50;
-}
+@layer base {
+  body {
+    @apply antialiased text-gray-700 bg-gray-50;
+  }
 
-a {
-  transition: all 0.15s ease;
-}
+  a {
+    transition: all 0.15s ease;
+  }
 
-article > * + * {
+  article > * + * {
+    @apply mt-2;
+  }
+
+  hr {
+    @apply my-8 border-t border-gray-300;
+  }
+
+  /* p {
   @apply mt-4;
-}
+} */
 
-hr {
-  @apply my-8 border-t border-gray-300;
-}
+  p a {
+    @apply font-bold text-teal-600 border-b-2 border-teal-600;
+  }
 
-p {
-  @apply mt-4;
-}
+  p a:hover {
+    @apply text-teal-700 border-teal-700;
+  }
 
-p a {
-  @apply font-bold text-teal-600 border-b-2 border-teal-600;
-}
+  h1 {
+    @apply mt-12 text-3xl font-extrabold leading-none;
+  }
 
-p a:hover {
-  @apply text-teal-700 border-teal-700;
-}
+  h2 {
+    @apply mt-10 text-xl font-bold leading-none;
+  }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  @apply text-gray-900;
-}
+  h3 {
+    @apply mt-4 text-lg font-semibold;
+  }
 
-h1 {
-  @apply my-4 text-3xl font-extrabold leading-none;
-}
+  h4 {
+    @apply mt-2 font-semibold;
+  }
 
-h2 {
-  @apply mt-16 mb-4 text-2xl font-bold leading-none;
-}
+  ul,
+  ol {
+    @apply ml-5 list-disc;
+  }
 
-h3 {
-  @apply mt-12 text-lg font-semibold;
-}
+  ul > * + *,
+  ol > * + *,
+  ul ul,
+  ol ul,
+  ul ol {
+    @apply mt-2;
+  }
 
-h4 {
-  @apply mt-6 font-semibold;
-}
+  ::marker {
+    @apply font-bold;
+  }
 
-ul {
-  @apply ml-8 list-disc;
-}
+  ol {
+    @apply list-decimal;
+  }
 
-ol {
-  @apply ml-8 list-decimal;
-}
-
-ul > * + *,
-ul ul {
-  @apply mt-1;
-}
-
-p + ul {
-  @apply mt-4;
-}
-
-code {
-  @apply px-1 text-pink-600 bg-gray-300;
-}
-
-.btn-blue {
-  @apply px-4 py-2 font-bold text-white bg-blue-500 rounded;
+  code {
+    @apply px-1 text-pink-600 bg-gray-200;
+  }
 }
 
 .container {
-  @apply max-w-2xl;
+  max-width: 72ch;
 }
