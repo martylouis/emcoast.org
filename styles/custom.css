@@ -1,8 +1,5 @@
-@tailwind base;
-
-/* Base styles */
 body {
-  @apply antialiased text-gray-800 bg-gray-100;
+  @apply antialiased text-gray-800 bg-gray-50;
 }
 
 a {
@@ -74,11 +71,6 @@ code {
   @apply px-1 text-pink-600 bg-gray-300;
 }
 
-/* Start purging... */
-@tailwind components;
-/* Stop purging. */
-
-/* Custom components */
 .btn-blue {
   @apply px-4 py-2 font-bold text-white bg-blue-500 rounded;
 }
@@ -86,9 +78,3 @@ code {
 .container {
   @apply max-w-2xl;
 }
-
-/* Start purging... */
-@tailwind utilities;
-/* Stop purging. */
-
-/* Custom utilities */
