@@ -1,4 +1,4 @@
-import Timestamp from 'src/components/Timestamp';
+import Timestamp from '@/components/Timestamp';
 
 const DownloadButton = ({ link, text }) => (
   <div>

@@ -1,4 +1,4 @@
-import DownloadCard from 'src/components/Download';
+import DownloadCard from '@/components/Download';
 
 export default function Meeting({
   meeting,
