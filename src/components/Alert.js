@@ -1,12 +1,12 @@
 export default function Alert({ title, children, display }) {
   return display ? (
-    <div className="flex flex-row items-center p-3 mx-auto my-6 text-orange-600 bg-orange-100 border border-orange-400 rounded-md nowrap">
+    <div className="flex-row items-center p-3 text-center text-orange-700 border border-orange-400 rounded-lg bg-orange-50 sm:text-left sm:flex nowrap">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
-        className="w-8 h-8 mr-2 flex-0"
+        className="flex-shrink-0 w-6 h-6 mx-auto my-1 sm:ml-0 sm:mr-3"
       >
         <path
           strokeLinecap="round"
@@ -16,8 +16,8 @@ export default function Alert({ title, children, display }) {
         />
       </svg>
       <div>
-        <h4 className="my-0 text-lg font-bold text-orange-700">{title}</h4>
-        <p className="my-0 text-orange-700 bg-orange-100">{children}</p>
+        <p className="font-bold sm:mt-0">{title}</p>
+        <p className="text-sm">{children}</p>
       </div>
     </div>
   ) : (

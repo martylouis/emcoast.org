@@ -4,14 +4,16 @@ import {
   tuesday,
   meeting_alert,
   fsg,
-} from '@data/downloads';
-import Alert from '@components/Alert';
-import Timestamp from '@components/Timestamp';
-import Download from '@components/Download';
-import ButtonDownload from '@components/ButtonDownload';
+} from '@/data/downloads';
+import Alert from '@/componentsAlert';
+import { TimestampRelative } from '@/componentsTimestamp';
+import Meeting from '@/componentsMeeting';
+import DownloadCard from '@/componentsDownload';
 import Image from 'next/image';
 
-<Timestamp date={all_updated} />
+<div className="my-4 text-sm text-gray-500">
+  <TimestampRelative prefix="Updated " date={all_updated} />
+</div>
 
 ### General Reminders
 
@@ -19,26 +21,36 @@ Please follow the instructions provided by your Field Service Group Overseer. He
 
 ## Meeting Times & Schedules
 
-<Alert
-  display={meeting_alert.display}
-  title={meeting_alert.title}
-  children={meeting_alert.text}
+<div className="my-4">
+  <Alert
+    display={meeting_alert.display}
+    title={meeting_alert.title}
+    children={meeting_alert.text}
+  />
+</div>
+
+<div className="mt-6">
+  <Meeting
+    meeting={sunday.meeting}
+    title={sunday.title}
+    day={sunday.day}
+    time={sunday.time}
+    fileName={sunday.fileName}
+    updated={sunday.updated}
 />
 
-<Download
-  title={sunday.title}
-  day={sunday.day}
-  time={sunday.time}
-  fileName={`${sunday.fileName}`}
-  updated={sunday.updated}
-/>
-<Download
-  title={tuesday.title}
-  day={tuesday.day}
-  time={tuesday.time}
-  fileName={`${tuesday.fileName}`}
-  updated={tuesday.updated}
-/>
+</div>
+<div className="mt-6">
+  <Meeting
+    meeting={tuesday.meeting}
+    title={tuesday.title}
+    day={tuesday.day}
+    time={tuesday.time}
+    fileName={tuesday.fileName}
+    updated={tuesday.updated}
+  />
+
+</div>
 
 ## Meeting Arrangements on Zoom
 
@@ -56,7 +68,7 @@ There are multiple ways to join a meeting, here are the following options:
 
 1. **Join with a Computer:** Once you receive your invitation, click on the _Zoom_ link, and you will be directed to open the application or download the application to your computer. You can also download here:
 
-<div className="ml-8" style={{ width: '180px' }}>
+<div className="ml-8" style={{ width: '140px' }}>
   <a href="https://zoom.us/download" target="_blank" rel="noopener noreferrer">
     <Image
       src="/img/zoom-logo-transparent.png"
@@ -69,7 +81,7 @@ There are multiple ways to join a meeting, here are the following options:
 
 2. **Join with a mobile device on the _Zoom_ app:** Download the _Zoom_ app to your mobile phone or tablet here:
 
-<div className="sm:flex ml-8 my-8">
+<div className="sm:flex ml-8 my-4">
   <a
     href="https://apps.apple.com/us/app/zoom-cloud-meetings/id546505307?mt=8"
     className="block m-2"
@@ -102,14 +114,26 @@ There are multiple ways to join a meeting, here are the following options:
   </a>
 </div>
 
-3. **Join by Phone:** Call in with the phone number and Meeting ID.
+<ol start="3">
+  <li>
+    <p>
+      <strong>Join by Phone:</strong> Call in with the phone number and Meeting
+      ID.
+    </p>
+    <ul>
+      <li>
+        Press <code>*6</code> to mute/unmute
+      </li>
+      <li>
+        Press <code>*9</code> if you'd like to comment
+      </li>
+    </ul>
+  </li>
+</ol>
 
-- Press `*6` to mute/unmute
-- Press `*9` if you’d like to comment
-
-<div className="p-6 mt-12 border border-gray-400 bg-gray-200 rounded-lg">
+<div className="px-4 py-4 mt-12 border border-gray-400 bg-gray-100 rounded-lg">
   <div>
-    <h4 className="-mt-2 font-bold">Having Technical Issues?</h4>
+    <h4 className="mt-0 mb-2 font-bold">Having Technical Issues?</h4>
     <p>
       Zoom has an excellent online support website with video tutorials that can
       help you get setup:{' '}
@@ -187,4 +211,11 @@ Feel free to say hello using the chat feature before and after the meeting, but 
 
 Features of our public ministry, including the door-to-door work and public witnessing, are discontinued until further instruction is given. Other forms of witnessing that do not require being in close contact with groups of people, such as letter writing, is encouraged.
 
-<Download title={fsg.title} fileName={fsg.fileName} updated={fsg.updated} />
+<div className="mt-4">
+  <DownloadCard
+    title={fsg.title}
+    fileName={fsg.fileName}
+    updated={fsg.updated}
+    label="List"
+  />
+</div>

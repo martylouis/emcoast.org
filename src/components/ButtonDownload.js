@@ -1,10 +1,10 @@
-import Timestamp from '@components/Timestamp';
+import Timestamp from '@/components/Timestamp';
 
 const DownloadButton = ({ link, text }) => (
   <div>
     <a
       href={link}
-      className="flex items-center justify-center h-10 px-3 font-bold leading-none text-white whitespace-no-wrap bg-teal-600 rounded hover:bg-teal-700"
+      className="flex items-center justify-center px-4 text-sm font-semibold leading-none text-white bg-blue-500 rounded shadow-sm h-9 whitespace-nowrap"
       rel="noopener noreferrer"
       target="_blank"
       download
@@ -12,8 +12,10 @@ const DownloadButton = ({ link, text }) => (
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
+        width="16"
+        height="16"
         fill="currentColor"
-        className="w-5 h-5 mr-1 -ml-1 fill-current"
+        className="mr-0.5 -ml-0.5 fill-current"
       >
         <path
           fillRule="evenodd"
