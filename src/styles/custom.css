@@ -24,7 +24,7 @@
   }
 
   h1 {
-    @apply mt-12 text-3xl font-extrabold leading-none;
+    @apply mt-12 text-2xl font-extrabold leading-none md:text-3xl;
   }
 
   h2 {
@@ -66,5 +66,5 @@
 }
 
 .container {
-  max-width: 72ch;
+  max-width: 60ch;
 }

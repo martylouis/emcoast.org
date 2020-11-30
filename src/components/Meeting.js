@@ -39,7 +39,7 @@ export default function Meeting({
       <div className="flex flex-col flex-1 ml-2 space-y-4">
         <div className="flex flex-col pt-1">
           <span className="text-lg font-medium text-gray-900">{meeting}</span>
-          <span className={`text-sm opacity-75`}>
+          <span className={`text-sm`}>
             Every {day} at {time} CT on Zoom
           </span>
         </div>

@@ -4,7 +4,7 @@ const DownloadButton = ({ link, text }) => (
   <div>
     <a
       href={link}
-      className="flex items-center justify-center h-10 px-2 text-sm font-semibold leading-none text-white bg-gray-500 rounded sm:h-8 whitespace-nowrap hover:bg-gray-600"
+      className="flex items-center justify-center px-4 text-sm font-semibold leading-none text-white bg-blue-500 rounded shadow-sm h-9 whitespace-nowrap"
       rel="noopener noreferrer"
       target="_blank"
       download
