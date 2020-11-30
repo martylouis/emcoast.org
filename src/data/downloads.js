@@ -1,21 +1,23 @@
 module.exports = {
   all_updated: '2020-11-26',
   sunday: {
-    title: 'Public Talk Schedule',
+    meeting: 'Public Talk & Watchtower',
     day: 'Sunday',
     time: '10:00 AM',
+    title: 'Public Talk Schedule',
     fileName: 'Schedule_PT',
     updated: '2020-11-08',
   },
   tuesday: {
-    title: 'Our Christian Life & Ministry (Midweek Meeting) Schedule',
+    meeting: 'Our Christian Life & Ministry',
     day: 'Tuesday',
     time: '7:00 PM',
     fileName: 'Schedule_CLM',
+    title: 'Midweek Meeting Schedule',
     updated: '2020-11-26',
   },
   fsg: {
-    title: 'Field Service Groups',
+    title: 'Field Service Group List',
     fileName: 'EC-FSG',
     updated: '2020-06-20',
   },

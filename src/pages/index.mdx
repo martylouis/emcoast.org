@@ -6,13 +6,13 @@ import {
   fsg,
 } from '@data/downloads';
 import Alert from '@components/Alert';
-import Timestamp from '@components/Timestamp';
-import Download from '@components/Download';
-import ButtonDownload from '@components/ButtonDownload';
+import { TimestampRelative } from '@components/Timestamp';
+import Meeting from '@components/Meeting';
+import DownloadCard from '@components/Download';
 import Image from 'next/image';
 
-<div className="mt-2">
-  <Timestamp date={all_updated} />
+<div className="my-4 text-sm text-gray-500">
+  <TimestampRelative prefix="Updated " date={all_updated} />
 </div>
 
 ### General Reminders
@@ -29,20 +29,28 @@ Please follow the instructions provided by your Field Service Group Overseer. He
   />
 </div>
 
-<Download
-  title={sunday.title}
-  day={sunday.day}
-  time={sunday.time}
-  fileName={`${sunday.fileName}`}
-  updated={sunday.updated}
+<div className="mt-6">
+  <Meeting
+    meeting={sunday.meeting}
+    title={sunday.title}
+    day={sunday.day}
+    time={sunday.time}
+    fileName={sunday.fileName}
+    updated={sunday.updated}
 />
-<Download
-  title={tuesday.title}
-  day={tuesday.day}
-  time={tuesday.time}
-  fileName={`${tuesday.fileName}`}
-  updated={tuesday.updated}
-/>
+
+</div>
+<div className="mt-6">
+  <Meeting
+    meeting={tuesday.meeting}
+    title={tuesday.title}
+    day={tuesday.day}
+    time={tuesday.time}
+    fileName={tuesday.fileName}
+    updated={tuesday.updated}
+  />
+
+</div>
 
 ## Meeting Arrangements on Zoom
 
@@ -203,4 +211,11 @@ Feel free to say hello using the chat feature before and after the meeting, but 
 
 Features of our public ministry, including the door-to-door work and public witnessing, are discontinued until further instruction is given. Other forms of witnessing that do not require being in close contact with groups of people, such as letter writing, is encouraged.
 
-<Download title={fsg.title} fileName={fsg.fileName} updated={fsg.updated} />
+<div className="mt-4">
+  <DownloadCard
+    title={fsg.title}
+    fileName={fsg.fileName}
+    updated={fsg.updated}
+    label="List"
+  />
+</div>

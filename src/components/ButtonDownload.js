@@ -1,10 +1,10 @@
-import Timestamp from '@components/Timestamp';
+import Timestamp from 'src/components/Timestamp';
 
 const DownloadButton = ({ link, text }) => (
   <div>
     <a
       href={link}
-      className="flex items-center justify-center h-10 px-3 font-bold leading-none text-white bg-teal-600 rounded whitespace-nowrap hover:bg-teal-700"
+      className="flex items-center justify-center h-8 px-2 font-semibold leading-none text-white bg-blue-500 rounded whitespace-nowrap hover:bg-blue-700"
       rel="noopener noreferrer"
       target="_blank"
       download
