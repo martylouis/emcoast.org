@@ -13,15 +13,17 @@
   "dependencies": {
     "@mdx-js/loader": "^1.6.19",
     "@next/mdx": "^10.0.0",
+    "autoprefixer": "^10.0.4",
     "dayjs": "^1.9.4",
     "next": "^10.0.0",
     "next-seo": "^4.15.0",
+    "postcss": "^8.1.10",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
     "prettier": "^2.1.2",
-    "tailwindcss": "^1.9.6"
+    "tailwindcss": "^2.0.1"
   },
   "resolutions": {
     "next/**/node-fetch": "^2.6.1",
