@@ -10,20 +10,20 @@ export default function Meeting({
 }) {
   const static_src_url = 'https://static.martylouis.com/emcoast/';
   const url = `${static_src_url}${fileName}--${updated}.pdf`;
-  const highlight = day == 'Sunday' ? 'blue' : 'purple';
+  const highlight = day == 'Sunday' ? 'bg-blue-300' : 'bg-purple-300';
 
   return (
     <div className="flex mb-8">
       <div className="flex flex-col items-center">
         <div
-          className={`flex justify-center p-1 mt-1.5 text-${highlight}-800 border-4 rounded-full align-center border-gray-50 bg-opacity-10`}
+          className={`flex justify-center p-2 mt-1.5 border-4 rounded-full align-center ${highlight} border-gray-50 bg-opacity-60`}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            width="20"
-            height="20"
+            width="16"
+            height="16"
             stroke="currentColor"
           >
             <path
@@ -34,12 +34,12 @@ export default function Meeting({
             />
           </svg>
         </div>
-        <div className="flex-1 w-px bg-gray-200"></div>
+        <div className="flex-1 w-px bg-gray-300"></div>
       </div>
       <div className="flex flex-col flex-1 ml-2 space-y-4">
         <div className="flex flex-col pt-1">
-          <span className={`font-medium text-${highlight}-800`}>{meeting}</span>
-          <span className={`text-sm text-${highlight}-900 opacity-75`}>
+          <span className="text-lg font-medium text-gray-900">{meeting}</span>
+          <span className={`text-sm opacity-75`}>
             Every {day} at {time} CT on Zoom
           </span>
         </div>

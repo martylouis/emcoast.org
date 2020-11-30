@@ -43,7 +43,7 @@ function TimestampWrapper({ date, prefix, children }) {
   return (
     <div className="flex items-center">
       {isNew(date) && <TimestampNew />}
-      <div className={isNew(date) ? 'font-semibold text-green-800' : undefined}>
+      <div className={isNew(date) ? 'font-semibold text-teal-600' : undefined}>
         {prefix}
         <time dateTime={date}>{children}</time>
       </div>
@@ -53,7 +53,7 @@ function TimestampWrapper({ date, prefix, children }) {
 
 function TimestampNew() {
   return (
-    <div className="px-1 mr-2 text-xs font-bold text-green-600 border-2 border-green-600 rounded">
+    <div className="px-1 mr-2 text-xs font-bold text-teal-500 border-2 border-teal-500 rounded">
       New
     </div>
   );
