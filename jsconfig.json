@@ -6,7 +6,7 @@
       "@/lib/*": ["./src/lib/*"],
       "@/utils/*": ["./src/utils/*"],
       "@/styles/*": ["./src/styles/*"],
-      "@/data/*": ["./src/data/*"],
+      "@/data/*": ["./data/*"],
     }
   },
   "exclude": ["node_modules"]
