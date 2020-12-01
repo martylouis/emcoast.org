@@ -11,9 +11,9 @@ export default function DownloadCard({ title, fileName, updated }) {
       <div className="flex flex-col space-y-2 sm:space-y-0 sm:justify-between sm:items-center sm:flex-row sm:space-x-2">
         <div className="flex flex-col space-y-1">
           <p className="text-sm font-medium">{title}</p>
-          <p className="text-xs font-normal text-gray-500">
+          <div className="text-xs font-normal text-gray-500">
             <Timestamp date={updated} />
-          </p>
+          </div>
         </div>
         <ButtonDownload text="Download" link={url} />
       </div>
