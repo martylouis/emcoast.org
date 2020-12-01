@@ -1,7 +1,6 @@
 import dayjs from 'dayjs';
 import * as relativeTime from 'dayjs/plugin/relativeTime';
 import * as utc from 'dayjs/plugin/utc';
-import { CorporateContactJsonLd } from 'next-seo';
 
 dayjs.extend(relativeTime);
 dayjs.extend(utc);
