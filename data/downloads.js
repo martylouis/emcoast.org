@@ -1,5 +1,5 @@
 module.exports = {
-  all_updated: '2020-11-26',
+  all_updated: '2020-12-01T:16:30:00',
   sunday: {
     meeting: 'Public Talk & Watchtower',
     day: 'Sunday',
@@ -14,7 +14,7 @@ module.exports = {
     time: '7:00 PM',
     fileName: 'Schedule_CLM',
     title: 'Midweek Meeting Schedule',
-    updated: '2020-11-26',
+    updated: '2020-12-01T:16:30:00',
   },
   fsg: {
     title: 'Field Service Group List',
