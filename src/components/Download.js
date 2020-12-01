@@ -1,6 +1,6 @@
-import Card from '@/componentsCard';
-import ButtonDownload from '@/componentsButtonDownload';
-import Timestamp from '@/componentsTimestamp';
+import Card from '@/components/Card';
+import ButtonDownload from '@/components/ButtonDownload';
+import Timestamp from '@/components/Timestamp';
 
 export default function DownloadCard({ title, fileName, updated }) {
   const static_src_url = 'https://static.martylouis.com/emcoast/';
