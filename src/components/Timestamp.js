@@ -6,14 +6,13 @@ dayjs.extend(relativeTime);
 dayjs.extend(utc);
 
 const NOW = new Date();
-const PREFIX_DEFAULT = 'Updated on ';
+const PREFIX_DEFAULT = 'Updated ';
 const DAYS_NEW = 7;
-const OFFSET = 1;
 
 export default function Timestamp({ date, prefix = PREFIX_DEFAULT }) {
   return (
     <TimestampWrapper date={date} prefix={prefix}>
-      {dayjs(getOffsetDate(date)).format('MMM D, YYYY')}
+      {isNew(date) ? getRelativeDate(date) : getformattedDate(date)}
     </TimestampWrapper>
   );
 }
@@ -21,21 +20,9 @@ export default function Timestamp({ date, prefix = PREFIX_DEFAULT }) {
 export function TimestampRelative({ date, prefix = PREFIX_DEFAULT }) {
   return (
     <TimestampWrapper date={date} prefix={prefix}>
-      {dayjs(getOffsetDate(date)).fromNow()}
+      {getRelativeDate(date)}
     </TimestampWrapper>
   );
-}
-
-function getOffsetDate(date) {
-  return dayjs.utc(date).utcOffset(OFFSET);
-}
-
-function isNew(date) {
-  let isNew = false;
-  let getDaysDiff = dayjs(NOW).diff(date, 'day');
-  isNew = getDaysDiff <= DAYS_NEW;
-
-  return isNew;
 }
 
 function TimestampWrapper({ date, prefix, children }) {
@@ -50,10 +37,26 @@ function TimestampWrapper({ date, prefix, children }) {
   );
 }
 
-function TimestampNew() {
+export function TimestampNew() {
   return (
-    <div className="px-1 mr-2 text-xs font-bold text-teal-500 border-2 border-teal-500 rounded">
+    <span className="px-1 mr-1.5 text-xs font-bold text-teal-500 border-2 border-teal-500 rounded">
       New
-    </div>
+    </span>
   );
+}
+
+export function isNew(date) {
+  let isNew = false;
+  let getDaysDiff = dayjs(NOW).diff(date, 'day');
+  isNew = getDaysDiff <= DAYS_NEW;
+
+  return isNew;
+}
+
+function getformattedDate(date) {
+  return dayjs(date).format('MMM D, YYYY');
+}
+
+function getRelativeDate(date) {
+  return dayjs(date).fromNow();
 }
