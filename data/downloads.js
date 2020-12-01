@@ -5,20 +5,20 @@ module.exports = {
     day: 'Sunday',
     time: '10:00 AM',
     title: 'Public Talk Schedule',
-    fileName: 'Schedule_PT',
+    fileName: 'Schedule_PT--2020-11-08',
     updated: '2020-11-08',
   },
   tuesday: {
     meeting: 'Our Christian Life & Ministry',
     day: 'Tuesday',
     time: '7:00 PM',
-    fileName: 'Schedule_CLM',
+    fileName: 'Schedule_CLM--2020-12-01',
     title: 'Midweek Meeting Schedule',
     updated: '2020-12-01T:16:30:00',
   },
   fsg: {
     title: 'Field Service Group List',
-    fileName: 'EC-FSG',
+    fileName: 'EC-FSG--2020-06-20',
     updated: '2020-06-20',
   },
   meeting_alert: {

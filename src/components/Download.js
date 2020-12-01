@@ -3,8 +3,7 @@ import ButtonDownload from '@/components/ButtonDownload';
 import Timestamp from '@/components/Timestamp';
 
 export default function DownloadCard({ title, fileName, updated }) {
-  const static_src_url = 'https://static.martylouis.com/emcoast/';
-  const url = `${static_src_url}${fileName}--${updated}.pdf`;
+  const download_url = `https://static.martylouis.com/emcoast/${fileName}.pdf`;
 
   return (
     <Card>
@@ -15,7 +14,7 @@ export default function DownloadCard({ title, fileName, updated }) {
             <Timestamp date={updated} />
           </div>
         </div>
-        <ButtonDownload text="Download" link={url} />
+        <ButtonDownload text="Download" link={download_url} />
       </div>
     </Card>
   );
