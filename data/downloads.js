@@ -1,12 +1,12 @@
 module.exports = {
-  all_updated: '2020-12-01T:16:30:00',
+  all_updated: '2020-12-03T:10:33:52',
   sunday: {
     meeting: 'Public Talk & Watchtower',
     day: 'Sunday',
     time: '10:00 AM',
     title: 'Public Talk Schedule',
-    fileName: 'Schedule_PT--2020-11-08',
-    updated: '2020-11-08',
+    fileName: 'Schedule_PT--2020-12-03',
+    updated: '2020-12-03T:10:33:52',
   },
   tuesday: {
     meeting: 'Our Christian Life & Ministry',
