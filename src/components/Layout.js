@@ -20,7 +20,7 @@ export default function Layout({ children }) {
       <header className="pt-4">
         <div className="container">
           <h1 className="leading-tight">
-            Emerald Coast Congregation Annoucements
+            Emerald Coast Congregation Announcements
           </h1>
         </div>
       </header>
