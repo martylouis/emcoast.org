@@ -22,7 +22,7 @@ module.exports = {
     updated: '2020-06-20',
   },
   meeting_alert: {
-    display: true,
+    display: false,
     title: 'Circuit Assembly on Sunday, Dec 13, 2020',
     text: 'No Midweek Meeting for the week of Dec 7, 2020',
   },
