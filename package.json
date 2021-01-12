@@ -17,6 +17,7 @@
     "autoprefixer": "^10.0.4",
     "dayjs": "^1.9.4",
     "next": "^10.0.0",
+    "next-sanity": "^0.1.8",
     "next-seo": "^4.15.0",
     "postcss": "^8.1.10",
     "react": "^17.0.1",
