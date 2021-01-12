@@ -2,7 +2,8 @@ import Card from '@/components/Card';
 import ButtonDownload from '@/components/ButtonDownload';
 import Timestamp from '@/components/Timestamp';
 
-export default function DownloadCard({ title, fileName, updated }) {
+export default function DownloadCard({ data }) {
+  const { title, fileName, updated } = data;
   const download_url = `https://static.martylouis.com/emcoast/${fileName}.pdf`;
 
   return (
