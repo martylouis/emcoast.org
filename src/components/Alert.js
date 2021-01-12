@@ -1,4 +1,5 @@
-export default function Alert({ title, children, display }) {
+export default function Alert({ data, children }) {
+  const { display, title, text } = data;
   return display ? (
     <div className="flex-row items-center p-3 text-center text-orange-700 border border-orange-400 rounded-lg bg-orange-50 sm:text-left sm:flex nowrap">
       <svg
@@ -17,7 +18,7 @@ export default function Alert({ title, children, display }) {
       </svg>
       <div>
         <p className="font-bold sm:mt-0">{title}</p>
-        <p className="text-sm">{children}</p>
+        <p className="text-sm">{text}</p>
       </div>
     </div>
   ) : (

@@ -1,13 +1,8 @@
 import DownloadCard from '@/components/Download';
 
-export default function Meeting({
-  meeting,
-  day,
-  time,
-  title,
-  fileName,
-  updated,
-}) {
+export default function Meeting({ data }) {
+  const { meeting, day, time, title, fileName, updated } = data;
+
   const static_src_url = 'https://static.martylouis.com/emcoast/';
   const url = `${static_src_url}${fileName}--${updated}.pdf`;
   const highlight = day == 'Sunday' ? 'bg-blue-300' : 'bg-purple-300';
@@ -43,7 +38,7 @@ export default function Meeting({
             Every {day} at {time} CT on Zoom
           </span>
         </div>
-        <DownloadCard title={title} fileName={fileName} updated={updated} />
+        <DownloadCard data={data} />
       </div>
     </div>
   );

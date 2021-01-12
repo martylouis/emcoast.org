@@ -22,34 +22,15 @@ Please follow the instructions provided by your Field Service Group Overseer. He
 ## Meeting Times & Schedules
 
 <div className="my-4">
-  <Alert
-    display={meeting_alert.display}
-    title={meeting_alert.title}
-    children={meeting_alert.text}
-  />
+  <Alert data={meeting_alert} />
 </div>
 
 <div className="mt-6">
-  <Meeting
-    meeting={sunday.meeting}
-    title={sunday.title}
-    day={sunday.day}
-    time={sunday.time}
-    fileName={sunday.fileName}
-    updated={sunday.updated}
-/>
-
+  <Meeting data={sunday} />
 </div>
-<div className="mt-6">
-  <Meeting
-    meeting={tuesday.meeting}
-    title={tuesday.title}
-    day={tuesday.day}
-    time={tuesday.time}
-    fileName={tuesday.fileName}
-    updated={tuesday.updated}
-  />
 
+<div className="mt-6">
+  <Meeting data={tuesday} />
 </div>
 
 ## Meeting Arrangements on Zoom
@@ -212,10 +193,5 @@ Feel free to say hello using the chat feature before and after the meeting, but 
 Features of our public ministry, including the door-to-door work and public witnessing, are discontinued until further instruction is given. Other forms of witnessing that do not require being in close contact with groups of people, such as letter writing, is encouraged.
 
 <div className="mt-4">
-  <DownloadCard
-    title={fsg.title}
-    fileName={fsg.fileName}
-    updated={fsg.updated}
-    label="List"
-  />
+  <DownloadCard data={fsg} />
 </div>
