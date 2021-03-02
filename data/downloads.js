@@ -12,7 +12,7 @@ module.exports = {
     meeting: 'Our Christian Life & Ministry',
     day: 'Tuesday',
     time: '7:00 PM',
-    fileName: 'Schedule_CLM--2020-02-21',
+    fileName: 'Schedule_CLM--2021-02-21',
     title: 'Midweek Meeting Schedule',
     updated: '2021-03-02T14:11:21',
   },
