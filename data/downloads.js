@@ -18,7 +18,7 @@ module.exports = {
   },
   fsg: {
     title: 'Field Service Group List',
-    fileName: 'FSG--2020-04-12',
+    fileName: 'FSG--2021-04-12',
     updated: '2021-04-12T10:24:48',
   },
   meeting_alert: {
