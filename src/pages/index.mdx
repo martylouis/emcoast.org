@@ -8,38 +8,40 @@ import {
 import Alert from '@/components/Alert';
 import { TimestampRelative } from '@/components/Timestamp';
 import Meeting from '@/components/Meeting';
-import DownloadCard from '@/components/Download';
+import Card from '@/components/Card';
+import DownloadCard from '@/components/DownloadCard';
 import Image from 'next/image';
 
-<div className="my-4 text-sm text-gray-500">
-  <TimestampRelative prefix="Updated " date={all_updated} />
-</div>
-
-### General Reminders
-
-Please follow the instructions provided by your Field Service Group Overseer. He will have the latest information from the body of elders on congregation activities.
-
-## Meeting Times & Schedules
-
-<div className="my-4">
+<div className="">
   <Alert data={meeting_alert} />
 </div>
 
-<div className="mt-6">
+## Meetings
+
+<div className="grid sm:grid-cols-2 gap-x-6 gap-y-4">
   <Meeting data={sunday} />
+  <Meeting data={tuesday} />
 </div>
 
-<div className="mt-6">
-  <Meeting data={tuesday} />
+## Upcoming Events
+
+<div className="grid sm:grid-cols-2 gap-x-6 gap-y-4">
+<Card>
+  <span className="text-xl">Circuit Assembly with CO</span> <br />
+  <span className="font-bold">September 12, 2021</span> <br />
+  <span className="text-sm">JW Stream-Studio (Live)</span>
+</Card>
+
+<Card>
+  <span className="text-xl">Circuit Assembly with BR</span> <br />
+  <span className="font-bold">December 19, 2021</span> <br />
+  <span className="text-sm">JW Stream-Studio (Live)</span>
+</Card>
 </div>
 
 ## Meeting Arrangements on Zoom
 
 There are no meetings at the Kingdom Hall until further notice. Instead, congregation meetings will be held online using an audio/video conference service called _Zoom_.
-
-### Zoom Meeting Invitations
-
-Please see your Field Service Group Overseer for the _Zoom_ meeting invitation link. This link will be sent via e-mail or text message.
 
 ### How to Join
 
@@ -192,6 +194,6 @@ Feel free to say hello using the chat feature before and after the meeting, but 
 
 Features of our public ministry, including the door-to-door work and public witnessing, are discontinued until further instruction is given. Other forms of witnessing that do not require being in close contact with groups of people, such as letter writing, is encouraged.
 
-<div className="mt-4">
+<div className="mt-6">
   <DownloadCard data={fsg} />
 </div>

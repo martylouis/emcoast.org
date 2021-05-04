@@ -9,13 +9,15 @@ export default function DownloadCard({ data }) {
   return (
     <Card>
       <div className="flex flex-col space-y-2 sm:space-y-0 sm:justify-between sm:items-center sm:flex-row sm:space-x-2">
-        <div className="flex flex-col space-y-1">
-          <p className="text-sm font-medium">{title}</p>
-          <div className="text-xs font-normal text-gray-500">
+        <div>
+          <p className="text-lg font-medium">{title}</p>
+          <div className="text-xs font-normal text-gray-500 center">
             <Timestamp date={updated} />
           </div>
         </div>
-        <ButtonDownload text="Download" link={download_url} />
+        <div className="flex flex-col items-center space-y-1">
+          <ButtonDownload text="Download" link={download_url} />
+        </div>
       </div>
     </Card>
   );

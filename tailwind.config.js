@@ -6,12 +6,11 @@ module.exports = {
     colors: {
       gray: colors.blueGray,
       blue: colors.blue,
-      teal: colors.emerald,
+      teal: colors.teal,
       orange: colors.amber,
       pink: colors.pink,
       white: colors.white,
       purple: colors.purple,
-      green: colors.green,
     },
     container: {
       center: true,

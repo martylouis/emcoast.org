@@ -12,9 +12,9 @@ module.exports = {
     meeting: 'Our Christian Life & Ministry',
     day: 'Tuesday',
     time: '7:00 PM',
-    fileName: 'Schedule_CLM--2021-04-12',
+    fileName: 'Schedule_CLM--2021-05-04',
     title: 'Midweek Meeting Schedule',
-    updated: '2021-04-12T10:24:48',
+    updated: '2021-05-04T12:25:37',
   },
   fsg: {
     title: 'Field Service Group List',
@@ -22,8 +22,9 @@ module.exports = {
     updated: '2021-04-12T10:24:48',
   },
   meeting_alert: {
-    display: false,
-    title: 'Circuit Assembly on Sunday, Dec 13, 2020',
-    text: 'No Midweek Meeting for the week of Dec 7, 2020',
+    display: true,
+    title: 'Important:',
+    text:
+      'Please let your FSGO know before sending visitors a Zoom invitation.',
   },
 };
