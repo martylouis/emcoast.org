@@ -1,20 +1,20 @@
 module.exports = {
-  all_updated: '2021-06-01T21:19:36',
+  // all_updated: '2021-06-01T21:19:36',
   sunday: {
     meeting: 'Public Talk & Watchtower',
     day: 'Sunday',
     time: '10:00 AM',
     title: 'Public Talk Schedule',
-    fileName: 'Schedule_PT--2021-06-01',
-    updated: '2021-06-01T21:19:36',
+    fileName: 'Schedule_PTW--2021-06-14',
+    updated: '2021-06-14T12:08:00',
   },
   tuesday: {
     meeting: 'Our Christian Life & Ministry',
     day: 'Tuesday',
     time: '7:00 PM',
-    fileName: 'Schedule_CLM--2021-05-04',
+    fileName: 'Schedule_CLM--2021-06-14',
     title: 'Midweek Meeting Schedule',
-    updated: '2021-05-04T12:25:37',
+    updated: '2021-06-14T12:08:00',
   },
   fsg: {
     title: 'Field Service Group List',
