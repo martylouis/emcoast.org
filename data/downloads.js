@@ -22,7 +22,7 @@ module.exports = {
     updated: '2021-10-20T15:22:08',
   },
   meeting_alert: {
-    display: true,
+    display: false,
     title: 'Important:',
     text:
       'Please let your FSGO know before sending visitors a Zoom invitation.',
