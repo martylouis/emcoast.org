@@ -17,7 +17,7 @@ export default function Layout({ children }) {
         title="Emerald Coast Congregation"
         description="Latest updates and information on current arrangements during the COVID-19 pandemic."
       />
-      <header class="py-4 md:py-8">
+      <header className="py-4 md:py-8">
         <div className="container">
           <h1 className="text-xl font-extrabold leading-tight md:text-2xl">
             Emerald Coast Congregation
