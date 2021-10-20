@@ -27,4 +27,13 @@ module.exports = {
     text:
       'Please let your FSGO know before sending visitors a Zoom invitation.',
   },
+  events: {
+    list: [
+      {
+        title: 'Circuit Assembly with BR',
+        date: 'December 19, 2021',
+        location: 'JW Stream (prerecorded)',
+      },
+    ],
+  },
 };
