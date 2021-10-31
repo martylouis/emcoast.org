@@ -17,24 +17,27 @@ export default function Layout({ children }) {
         title="Emerald Coast Congregation"
         description="Latest updates and information on current arrangements during the COVID-19 pandemic."
       />
-      <header className="py-4 md:py-8">
-        <div className="container">
-          <h1 className="text-xl font-extrabold leading-tight md:text-2xl">
-            Emerald Coast Congregation
-          </h1>
-          <p className="mt-1 text-sm text-gray-600">
-            Miramar Beach, FL •  
-            <a
-              href="https://jw.org"
-              rel="noreferrer nofollow"
-              className="inline-flex font-normal text-gray-600 no-underline border-none"
-            >
-              JW.org{' '}
-              <span className="self-center ml-2">
-                <IconLaunch />
-              </span>
-            </a>
-          </p>
+      <header>
+        <div className="container pb-4">
+          <div className="py-6 border-b border-gray-300">
+            <h1 className="text-xl font-extrabold leading-tight md:text-2xl">
+              Emerald Coast Congregation
+            </h1>
+            <div className="mt-1 space-x-2 text-sm text-gray-600">
+              <span>Miramar Beach, FL</span>
+              <span>•</span>
+              <a
+                href="https://jw.org"
+                rel="noreferrer nofollow"
+                className="inline-flex font-normal text-gray-600 no-underline border-none"
+              >
+                JW.org{' '}
+                <span className="self-center ml-1">
+                  <IconLaunch title="Open JW.org in another browser" />
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
       </header>
       <main className="pb-32">
@@ -49,8 +52,8 @@ function IconLaunch(props) {
 
   return (
     <svg
-      height="12"
-      width="12"
+      height="10"
+      width="10"
       viewBox="0 0 12 12"
       xmlns="http://www.w3.org/2000/svg"
     >
