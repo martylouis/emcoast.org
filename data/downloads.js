@@ -5,8 +5,8 @@ module.exports = {
     day: 'Sunday',
     time: '10:00 AM',
     title: 'Public Talk Schedule',
-    fileName: 'Schedule_PTW--2021-12-07',
-    updated: '2021-12-07T17:13:03-06:00',
+    fileName: 'Schedule_PTW--2021-12-27',
+    updated: '2021-12-27T10:00:00-06:00',
   },
   tuesday: {
     meeting: 'Our Christian Life & Ministry',
