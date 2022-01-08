@@ -12,9 +12,9 @@ module.exports = {
     meeting: 'Our Christian Life & Ministry',
     day: 'Tuesday',
     time: '7:00 PM',
-    fileName: 'Schedule_CLM--2022-01-06',
+    fileName: 'Schedule_CLM--2022-01-08',
     title: 'Midweek Meeting Schedule',
-    updated: '2022-01-06T10:17:00-06:00',
+    updated: '2022-01-08T11:32:40-06:00',
   },
   fsg: {
     title: 'Field Service Group List',
@@ -24,8 +24,7 @@ module.exports = {
   meeting_alert: {
     display: false,
     title: 'Important:',
-    text:
-      'Please let your FSGO know before sending visitors a Zoom invitation.',
+    text: 'Please let your FSGO know before sending visitors a Zoom invitation.',
   },
   events: {
     list: [
