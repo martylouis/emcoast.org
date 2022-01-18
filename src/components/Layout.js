@@ -17,8 +17,8 @@ export default function Layout({ children }) {
         title="Emerald Coast Congregation"
         description="Latest updates and information on current arrangements during the COVID-19 pandemic."
       />
-      <header>
-        <div className="container pb-4">
+      <main className="container">
+        <header>
           <div className="py-6 border-b border-gray-300">
             <h1 className="text-xl font-extrabold leading-tight md:text-2xl">
               Emerald Coast Congregation
@@ -38,10 +38,8 @@ export default function Layout({ children }) {
               </a>
             </div>
           </div>
-        </div>
-      </header>
-      <main className="pb-32">
-        <article className="container">{children}</article>
+        </header>
+        <article className="pb-24">{children}</article>
       </main>
     </>
   );

@@ -64,6 +64,5 @@ code {
 }
 
 .container {
-  max-width: 64ch;
-  margin: 0 auto;
+  @apply px-6 mx-auto max-w-screen-md;
 }
