@@ -12,9 +12,9 @@ module.exports = {
     meeting: 'Our Christian Life & Ministry',
     day: 'Tuesday',
     time: '7:00 PM',
-    fileName: 'Schedule_CLM--2022-01-19',
+    fileName: 'Schedule_CLM--2022-02-24',
     title: 'Midweek Meeting Schedule',
-    updated: '2022-01-23T09:39:31-06:00',
+    updated: '2022-02-24T13:10:23-06:00',
   },
   fsg: {
     title: 'Field Service Group List',
