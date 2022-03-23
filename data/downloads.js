@@ -5,8 +5,8 @@ module.exports = {
     day: 'Sunday',
     time: '10:00 AM',
     title: 'Public Talk Schedule',
-    fileName: 'Schedule_PTW--2022-02-21',
-    updated: '2022-02-21T12:50:40-06:00',
+    fileName: 'Schedule_PTW--2022-03-23',
+    updated: '2022-03-23T10:56:55.2367170-05:00',
   },
   tuesday: {
     meeting: 'Our Christian Life & Ministry',
@@ -29,9 +29,12 @@ module.exports = {
   events: {
     list: [
       {
-        title: 'Circuit Assembly with BR',
-        date: 'December 19, 2021',
-        location: 'JW Stream (prerecorded)',
+        title: 'Memorial of Jesus&rsquo; Death',
+        date: 'Friday, April 15, 2022 at 7:00 PM',
+        location: {
+          title: 'Kingdom Hall of Jehovah&rsquo;s Witnesses',
+          url: 'https://apps.jw.org/E_SRCHMTGMAPS',
+        },
       },
     ],
   },
