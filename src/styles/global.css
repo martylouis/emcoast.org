@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply antialiased text-gray-800;
+  @apply antialiased text-gray-800 bg-gray-50;
 }
 
 a {
@@ -45,6 +45,7 @@ ol {
 
 ul > * + *,
 ol > * + *,
+details * > * + *,
 ul ul,
 ol ul,
 ul ol {
@@ -64,5 +65,13 @@ code {
 }
 
 .container {
-  @apply px-6 mx-auto max-w-screen-md;
+  @apply max-w-screen-md px-6 mx-auto;
+}
+
+summary {
+  @apply my-2 text-lg text-blue-500 outline-none cursor-pointer select-none;
+}
+
+summary::marker {
+  @apply text-blue-500;
 }

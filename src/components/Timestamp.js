@@ -39,7 +39,7 @@ function TimestampWrapper({ date, prefix, children }) {
 
 export function TimestampNew() {
   return (
-    <span className="w-1.5 h-1.5 mr-1.5 text-teal-500 bg-teal-600 rounded"></span>
+    <span className="text-teal-500 bg-teal-600 rounded w-1.5 h-1.5 mr-1.5"></span>
   );
 }
 

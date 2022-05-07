@@ -19,17 +19,17 @@ export default function Layout({ children }) {
       />
       <main className="container">
         <header>
-          <div className="py-6 border-b border-gray-300">
-            <h1 className="text-xl font-extrabold leading-tight md:text-2xl">
+          <div className="pt-[6vh]">
+            <h1 className="text-4xl font-bold leading-none tracking-tight md:text-5xl">
               Emerald Coast Congregation
             </h1>
-            <div className="mt-1 space-x-2 text-sm text-gray-600">
+            <div className="mt-2 space-x-2 text-gray-600">
               <span>Miramar Beach, FL</span>
               <span>•</span>
               <a
                 href="https://jw.org"
                 rel="noreferrer nofollow"
-                className="inline-flex font-normal text-gray-600 no-underline border-none"
+                className="inline-flex font-bold text-gray-700 no-underline border-none"
               >
                 JW.org{' '}
                 <span className="self-center ml-1">
