@@ -4,8 +4,7 @@ import DocumentCard from '@/components/DocumentCard';
 
 const Home = ({ posts }) => (
   <div>
-    <h2>Schedules</h2>
-
+    <h2>Download Schedules</h2>
     <div className="grid sm:grid-cols-2 gap-x-6 gap-y-4">
       {posts
         .filter((post) => post.fields.category === 'schedule')
