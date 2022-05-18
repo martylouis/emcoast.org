@@ -1,11 +1,11 @@
-import Image from 'next/image';
-import { getTable } from '../../lib/airtable';
-import DocumentCard from '@/components/DocumentCard';
+import Image from 'next/image'
+import { getTable } from '@/lib/airtable'
+import DocumentCard from '@/components/DocumentCard'
 
 const Home = ({ posts }) => (
   <div>
     <h2>Download Schedules</h2>
-    <div className="grid sm:grid-cols-2 gap-x-6 gap-y-4">
+    <div className="grid gap-x-6 gap-y-4 sm:grid-cols-2">
       {posts
         .filter((post) => post.fields.category === 'schedule')
         .map((post) => (
@@ -137,7 +137,7 @@ const Home = ({ posts }) => (
         Other forms of witnessing that do not require being in close contact
         with groups of people, such as letter writing, is encouraged.
       </p>
-      <div className="grid mt-4 sm:grid-cols-2 gap-x-6 gap-y-4">
+      <div className="grid mt-4 gap-x-6 gap-y-4 sm:grid-cols-2">
         {posts
           .filter((post) => post.fields.category === 'group')
           .map((post) => (
@@ -146,18 +146,18 @@ const Home = ({ posts }) => (
       </div>
     </div>
   </div>
-);
+)
 
-export default Home;
+export default Home
 
 export async function getStaticProps() {
   const posts = await getTable('Uploads', {
     maxRecords: 5,
-  });
+  })
   return {
     props: {
       posts,
     },
     revalidate: 10,
-  };
+  }
 }
