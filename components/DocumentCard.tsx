@@ -1,19 +1,38 @@
-import Image from 'next/image';
-import ButtonDownload from '@/components/ButtonDownload';
-import Timestamp from '@/components/Timestamp';
-import { Download } from 'react-feather';
+import Image from 'next/image'
+import ButtonDownload from '@/components/ButtonDownload'
+import Timestamp from '@/components/Timestamp'
 
-const DocumentCard = ({ post }) => (
+interface File {
+  id: string
+  url: string
+  thumbnails: {
+    large: {
+      url: string
+    }
+  }
+}
+
+interface IDocumentCardProps {
+  post: {
+    fields: {
+      file: File[]
+      uploadDate: string
+      title?: string
+    }
+  }
+}
+
+export const DocumentCard = ({ post }: IDocumentCardProps) => (
   <div className="overflow-hidden bg-white border border-gray-200 shadow rounded-xl">
     {'file' in post.fields &&
-      post.fields.file.map((file) => (
+      post.fields.file.map(({ id, url, thumbnails }) => (
         <div
-          key={file.id}
+          key={id}
           className="relative pt-4 overflow-hidden transition-all duration-200 bg-gray-200 border-b border-gray-200 group"
         >
           <a
             className="block"
-            href={file.url}
+            href={url}
             rel="noopener noreferrer"
             target="_blank"
             download
@@ -26,7 +45,7 @@ const DocumentCard = ({ post }) => (
                   objectPosition="top"
                   priority={true}
                   alt={post.fields.title}
-                  src={file.thumbnails.large.url}
+                  src={thumbnails.large.url}
                 />
               </span>
             </span>
@@ -61,6 +80,4 @@ const DocumentCard = ({ post }) => (
       </div>
     </div>
   </div>
-);
-
-export default DocumentCard;
+)

@@ -1,17 +1,16 @@
+import type { NextPage } from 'next'
 import Image from 'next/image'
 import { getTable } from '@/lib/airtable'
-import DocumentCard from '@/components/DocumentCard'
+import { DocumentCards, Posts } from '@/components/DocumentCards'
 
-const Home = ({ posts }) => (
+interface IHomePageProps {
+  posts: Posts[]
+}
+
+const Home: NextPage<IHomePageProps> = ({ posts }: IHomePageProps) => (
   <div>
     <h2>Download Schedules</h2>
-    <div className="grid gap-x-6 gap-y-4 sm:grid-cols-2">
-      {posts
-        .filter((post) => post.fields.category === 'schedule')
-        .map((post) => (
-          <DocumentCard key={post.id} post={post} />
-        ))}
-    </div>
+    <DocumentCards posts={posts} category="schedule" />
 
     <h2>Meeting Arrangements on Zoom</h2>
     <p>
@@ -137,13 +136,7 @@ const Home = ({ posts }) => (
         Other forms of witnessing that do not require being in close contact
         with groups of people, such as letter writing, is encouraged.
       </p>
-      <div className="grid mt-4 gap-x-6 gap-y-4 sm:grid-cols-2">
-        {posts
-          .filter((post) => post.fields.category === 'group')
-          .map((post) => (
-            <DocumentCard key={post.id} post={post} />
-          ))}
-      </div>
+      <DocumentCards posts={posts} category="group" />
     </div>
   </div>
 )
