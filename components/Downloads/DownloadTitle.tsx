@@ -1,11 +1,7 @@
-import { DownloadItem } from './DownloadItem'
-
-interface DownloadItemProps {
-  item: DownloadItem
+interface DownloadTitleProps {
+  children: React.ReactNode
 }
 
-export const DownloadTitle = ({ item }: DownloadItemProps) => {
-  return (
-    <h4 className="font-bold text-gray-900 md:text-lg">{item.fields.title}</h4>
-  )
+export const DownloadTitle = ({ children }: DownloadTitleProps) => {
+  return <h4 className="font-bold text-gray-900 md:text-lg">{children}</h4>
 }

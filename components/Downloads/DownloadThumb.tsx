@@ -1,21 +1,14 @@
 import Image from 'next/image'
-import { DownloadItem } from './DownloadItem'
 
 interface DownloadThumbProps {
-  item: DownloadItem
+  url: string
+  title: string
+  thumbUrl: string
 }
 
-export const DownloadThumb = ({ item }: DownloadThumbProps) => {
-  const { id, fields } = item
-  const { title, file } = fields
-  const { url, thumbnails } = file[0]
-  const thumbUrl = thumbnails.large.url
-
+export const DownloadThumb = ({ url, title, thumbUrl }: DownloadThumbProps) => {
   return (
-    <div
-      key={id}
-      className="relative pt-4 overflow-hidden transition-all duration-200 bg-gray-200 border-b border-gray-200 group"
-    >
+    <div className="relative pt-4 overflow-hidden transition-all duration-200 bg-gray-200 border-b border-gray-200 group">
       <a
         className="block"
         href={url}

@@ -28,17 +28,21 @@ interface DownloadItemProps {
 }
 
 export const DownloadItem = ({ item }: DownloadItemProps) => {
+  let { title, file, uploadDate } = item.fields
+  let { url, thumbnails } = file[0]
+  let { url: thumbUrl } = thumbnails.large
+
   return (
     <Card>
-      <DownloadThumb item={item} />
-      <DownloadNew item={item} />
+      <DownloadThumb url={url} title={title} thumbUrl={thumbUrl} />
+      <DownloadNew date={uploadDate} />
       <div className="flex items-end gap-3 p-4">
         <div className="flex-grow ">
-          <DownloadTitle item={item} />
-          <DownloadTimestamp item={item} />
+          <DownloadTitle>{title}</DownloadTitle>
+          <DownloadTimestamp date={uploadDate} />
         </div>
         <div className="flex-shrink">
-          <DownloadButton item={item} />
+          <DownloadButton url={url} />
         </div>
       </div>
     </Card>
