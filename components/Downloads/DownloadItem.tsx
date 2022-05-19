@@ -3,6 +3,7 @@ import { DownloadButton } from './DownloadButton'
 import { DownloadThumb } from './DownloadThumb'
 import { DownloadTitle } from './DownloadTitle'
 import { DownloadTimestamp } from './DownloadTimestamp'
+import { DownloadNew } from './DownloadNew'
 
 export interface DownloadItem {
   id: string
@@ -30,8 +31,9 @@ export const DownloadItem = ({ item }: DownloadItemProps) => {
   return (
     <Card>
       <DownloadThumb item={item} />
-      <div className="flex flex-col items-center gap-3 p-4 sm:flex-row">
-        <div className="flex-grow text-center sm:text-left">
+      <DownloadNew item={item} />
+      <div className="flex items-end gap-3 p-4">
+        <div className="flex-grow ">
           <DownloadTitle item={item} />
           <DownloadTimestamp item={item} />
         </div>
