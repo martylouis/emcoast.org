@@ -1,16 +1,16 @@
-import type { NextPage } from 'next'
+import type { GetStaticProps, NextPage } from 'next'
 import Image from 'next/image'
 import { getTable } from '@/lib/airtable'
-import { DocumentCards, Posts } from '@/components/DocumentCards'
+import { DownloadItem, DownloadList } from '@/components/Downloads'
 
 interface IHomePageProps {
-  posts: Posts[]
+  posts: DownloadItem[]
 }
 
 const Home: NextPage<IHomePageProps> = ({ posts }: IHomePageProps) => (
   <div>
     <h2>Download Schedules</h2>
-    <DocumentCards posts={posts} category="schedule" />
+    <DownloadList items={posts} category="schedule" />
 
     <h2>Meeting Arrangements on Zoom</h2>
     <p>
@@ -136,14 +136,14 @@ const Home: NextPage<IHomePageProps> = ({ posts }: IHomePageProps) => (
         Other forms of witnessing that do not require being in close contact
         with groups of people, such as letter writing, is encouraged.
       </p>
-      <DocumentCards posts={posts} category="group" />
+      <DownloadList items={posts} category="group" />
     </div>
   </div>
 )
 
 export default Home
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const posts = await getTable('Uploads', {
     maxRecords: 5,
   })
