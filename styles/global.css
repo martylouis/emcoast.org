@@ -71,7 +71,7 @@ code {
 }
 
 .container {
-  @apply max-w-screen-md px-6 mx-auto;
+  @apply max-w-screen-md px-5 mx-auto;
 }
 
 summary {

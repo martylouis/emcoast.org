@@ -1,11 +1,17 @@
+import clsx from 'clsx'
+
 interface CardProps {
   children: React.ReactNode
+  className?: string
 }
 
 export const Card = ({ children, ...props }: CardProps) => (
   <div
     {...props}
-    className="overflow-hidden bg-white border border-gray-200 shadow rounded-xl"
+    className={clsx(
+      'overflow-hidden rounded-xl border border-gray-200 bg-white shadow',
+      props.className
+    )}
   >
     {children}
   </div>
