@@ -1,5 +1,4 @@
-import Image from 'next/image'
-
+/* eslint-disable @next/next/no-img-element */
 interface DownloadThumbProps {
   url: string
   title: string
@@ -18,14 +17,7 @@ export const DownloadThumb = ({ url, title, thumbUrl }: DownloadThumbProps) => {
       >
         <span className="block px-4">
           <span className="relative block h-64 shadow-2xl">
-            <Image
-              layout="fill"
-              objectFit="cover"
-              objectPosition="top"
-              priority={true}
-              alt={title}
-              src={thumbUrl}
-            />
+            <img alt={title} src={thumbUrl} />
           </span>
         </span>
         <span className="absolute bottom-0 w-full h-24 px-4 pb-2 bg-gradient-to-b from-transparent to-white/75"></span>
