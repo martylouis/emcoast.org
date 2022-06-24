@@ -131,11 +131,10 @@ const Home: NextPage<IHomePageProps> = ({ posts }: IHomePageProps) => (
       </details>
       <h2>Field Service Arrangements</h2>
       <p>
-        Features of our public ministry, including the door-to-door work and
-        public witnessing, are discontinued until further instruction is given.
-        Other forms of witnessing that do not require being in close contact
-        with groups of people, such as letter writing, is encouraged.
+        As of May 31, 2022, all forms of public witnessing with the exception of
+        the door-to-door ministry has been resumed.
       </p>
+      <h3>Field Service Groups</h3>
       <DownloadList items={posts} category="group" />
     </div>
   </div>
