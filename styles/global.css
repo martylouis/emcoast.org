@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply antialiased text-gray-800 bg-white;
+  @apply bg-white text-gray-800 antialiased;
 }
 
 a {
@@ -19,21 +19,21 @@ hr {
 }
 
 p a {
-  @apply font-bold text-blue-600 border-b-2 border-blue-600;
+  @apply border-b-2 border-blue-600 font-bold text-blue-600;
 }
 
 p a:hover {
-  @apply text-blue-700 border-blue-700;
+  @apply border-blue-700 text-blue-700;
 }
 
 .prose h2,
 h2 {
-  @apply mt-12 mb-6 text-2xl font-bold leading-none;
+  @apply mt-8 mb-4 text-2xl font-bold leading-none;
 }
 
 .prose h3,
 h3 {
-  @apply mt-10 text-lg font-semibold;
+  @apply mt-6 text-lg font-semibold;
 }
 
 .prose h4,
@@ -67,15 +67,15 @@ ol {
 }
 
 code {
-  @apply px-1 text-pink-600 bg-gray-200;
+  @apply bg-gray-200 px-1 text-pink-600;
 }
 
 .container {
-  @apply max-w-screen-md px-5 mx-auto;
+  @apply mx-auto max-w-screen-md px-5;
 }
 
 summary {
-  @apply my-2 text-lg text-blue-500 outline-none cursor-pointer select-none;
+  @apply my-2 cursor-pointer select-none text-lg text-blue-500 outline-none;
 }
 
 summary::marker {

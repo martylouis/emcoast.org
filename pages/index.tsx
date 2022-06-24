@@ -63,8 +63,8 @@ const Home: NextPage<IHomePageProps> = ({ posts }: IHomePageProps) => (
               <strong>
                 Join with a mobile device on the <em>Zoom</em> app:
               </strong>{' '}
-              Download the <em>Zoom</em>
-              app to your mobile phone or tablet here:
+              Download the <em>Zoom</em> app to your mobile phone or tablet
+              here:
               <span className="my-2 flex space-x-2">
                 <a
                   href="https://apps.apple.com/us/app/zoom-cloud-meetings/id546505307?mt=8"
@@ -132,7 +132,7 @@ const Home: NextPage<IHomePageProps> = ({ posts }: IHomePageProps) => (
       <h2>Field Service Arrangements</h2>
       <p>
         As of May 31, 2022, all forms of public witnessing with the exception of
-        the door-to-door ministry has been resumed.
+        door-to-door ministry have been resumed.
       </p>
       <h3>Field Service Groups</h3>
       <DownloadList items={posts} category="group" />
