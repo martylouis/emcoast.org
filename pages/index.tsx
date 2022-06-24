@@ -65,7 +65,7 @@ const Home: NextPage<IHomePageProps> = ({ posts }: IHomePageProps) => (
               </strong>{' '}
               Download the <em>Zoom</em>
               app to your mobile phone or tablet here:
-              <span className="flex my-2 space-x-2">
+              <span className="my-2 flex space-x-2">
                 <a
                   href="https://apps.apple.com/us/app/zoom-cloud-meetings/id546505307?mt=8"
                   className="block"
@@ -115,7 +115,7 @@ const Home: NextPage<IHomePageProps> = ({ posts }: IHomePageProps) => (
               </ul>
             </li>
           </ol>
-          <div className="px-4 pt-4 pb-6 my-8 bg-gray-100 border border-gray-300 rounded-lg">
+          <div className="my-8 rounded-lg border border-gray-300 bg-gray-100 px-4 pt-4 pb-6">
             <div>
               <h4 className="mb-1 font-bold ">Having Technical Issues?</h4>
               <p>
