@@ -1,17 +1,18 @@
+import { FC } from 'react'
 import { DownloadItem } from './DownloadItem'
 
 interface DownloadListProps {
   items: DownloadItem[]
-  category: string
+  category: 'schedules' | 'fsg'
 }
 
-export const DownloadList = ({ items, category }: DownloadListProps) => {
-  let filteredItems = items.filter((item) => item.fields.category === category)
+export const DownloadList: FC<DownloadListProps> = ({ items, category }) => {
+  let filteredItems = items.filter((item) => item.category === category)
   return (
-    <div className="grid gap-8 sm:grid-cols-2">
-      {filteredItems.map((item) => (
-        <DownloadItem key={item.id} item={item} />
+    <>
+      {filteredItems.map(({ id, ...props }) => (
+        <DownloadItem key={id} {...props} />
       ))}
-    </div>
+    </>
   )
 }
