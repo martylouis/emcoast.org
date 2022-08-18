@@ -1,16 +1,16 @@
 import { FC } from 'react'
 import { DownloadItem } from './DownloadItem'
 
-interface DownloadListProps {
-  items: DownloadItem[]
-  category: 'schedules' | 'fsg'
+interface Props {
+  downloads: DownloadItem[]
+  category: string
 }
 
-export const DownloadList: FC<DownloadListProps> = ({ items, category }) => {
-  let filteredItems = items.filter((item) => item.category === category)
+export const DownloadList: FC<Props> = ({ downloads, category }) => {
+  const downloadItems = downloads.filter((item) => item.category === category)
   return (
     <>
-      {filteredItems.map(({ id, ...props }) => (
+      {downloadItems.map(({ id, ...props }) => (
         <DownloadItem key={id} {...props} />
       ))}
     </>

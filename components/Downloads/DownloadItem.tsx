@@ -8,7 +8,7 @@ import { FC } from 'react'
 
 export interface DownloadItem {
   id?: string
-  title?: string
+  title: string
   category: string
   file_url: string
   thumb_url: string
@@ -16,14 +16,15 @@ export interface DownloadItem {
 }
 
 export const DownloadItem: FC<DownloadItem> = ({
+  id,
   title,
+  category,
   file_url,
   thumb_url,
   uploaded_at,
-  ...rest
 }) => {
   return (
-    <Card>
+    <Card data-title={title} data-category={category}>
       <DownloadThumb url={file_url} title={title} thumbUrl={thumb_url} />
       <DownloadNew date={uploaded_at} />
       <div className="flex items-end gap-3 p-4">

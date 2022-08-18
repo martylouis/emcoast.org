@@ -8,7 +8,7 @@ const Home: NextPage = () => {
     <div>
       <h2>Download Schedules</h2>
       <div className="grid items-center justify-center gap-8 sm:grid-cols-2">
-        <DownloadList items={downloads} category="schedules" />
+        <DownloadList downloads={downloads} category="schedules" />
       </div>
 
       <h2>Meeting Arrangements on Zoom</h2>
@@ -136,7 +136,7 @@ const Home: NextPage = () => {
         </p>
         <h3>Field Service Groups</h3>
         <div className="grid justify-center gap-8 sm:grid-cols-2">
-          <DownloadList items={downloads} category="fsg" />
+          <DownloadList downloads={downloads} category="fsg" />
         </div>
       </div>
     </div>
