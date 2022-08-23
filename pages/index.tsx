@@ -132,8 +132,8 @@ const Home: NextPage = () => {
         <h2>Field Service Arrangements</h2>
         <p>
           As of <strong>September 1, 2022</strong>, the Emerald Coast
-          Congregation have resumed all in-person house-to-house ministry and
-          public witnessing.
+          Congregation have resumed in-person house-to-house ministry and all
+          forms of public witnessing.
         </p>
         <p>
           Additional arrangements can be made for those who cannot attend
