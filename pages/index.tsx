@@ -13,9 +13,9 @@ const Home: NextPage = () => {
 
       <h2>Meeting Arrangements on Zoom</h2>
       <p>
-        As of April 3, 2022, all in-person meetings at the Kingdom Hall have
-        been resumed. Congregation meetings will also be available to view on
-        Zoom.
+        As of <strong>April 3, 2022</strong>, the Emerald Coast Congregation
+        have resumed all in-person meetings at the Kingdom Hall. Congregation
+        meetings will also be available to view on Zoom.
       </p>
 
       <div className="prose">
@@ -131,10 +131,15 @@ const Home: NextPage = () => {
         </details>
         <h2>Field Service Arrangements</h2>
         <p>
-          As of May 31, 2022, all forms of public witnessing with the exception
-          of door-to-door ministry have been resumed.
+          As of <strong>September 1, 2022</strong>, the Emerald Coast
+          Congregation have resumed all in-person house-to-house ministry and
+          public witnessing.
         </p>
-        <h3>Field Service Groups</h3>
+        <p>
+          Additional arrangements can be made for those who cannot attend
+          in-person field service meetings. Please see your Field Service Group
+          Overseer for more information.
+        </p>
         <div className="grid justify-center gap-8 sm:grid-cols-2">
           <DownloadList downloads={downloads} category="fsg" />
         </div>

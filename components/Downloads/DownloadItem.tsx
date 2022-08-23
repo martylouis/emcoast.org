@@ -27,9 +27,11 @@ export const DownloadItem: FC<DownloadItem> = ({
     <Card data-title={title} data-category={category}>
       <DownloadThumb url={file_url} title={title} thumbUrl={thumb_url} />
       <DownloadNew date={uploaded_at} />
-      <div className="flex items-end gap-3 p-4">
-        <div className="flex-grow ">
-          <DownloadTitle>{title}</DownloadTitle>
+      <div className="flex items-center gap-2 p-4">
+        <div className="flex-grow">
+          <h4 className="mb-1 font-bold leading-tight text-gray-900">
+            {title}
+          </h4>
           <DownloadTimestamp date={uploaded_at} />
         </div>
         <div className="flex-shrink">

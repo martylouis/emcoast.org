@@ -15,8 +15,8 @@ export const DownloadThumb = ({ url, title, thumbUrl }: DownloadThumbProps) => {
         target="_blank"
         download
       >
-        <span className="block px-4">
-          <span className="relative block h-64 shadow-2xl">
+        <div className="px-4">
+          <div className="relative h-64 shadow-2xl">
             <img
               className="w-full"
               alt={title}
@@ -24,8 +24,8 @@ export const DownloadThumb = ({ url, title, thumbUrl }: DownloadThumbProps) => {
               width="300"
               height="517"
             />
-          </span>
-        </span>
+          </div>
+        </div>
         <span className="absolute bottom-0 h-24 w-full bg-gradient-to-b from-transparent to-white/75 px-4 pb-2"></span>
       </a>
     </div>
