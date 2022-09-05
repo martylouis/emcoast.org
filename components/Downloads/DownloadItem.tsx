@@ -1,10 +1,10 @@
+import { BadgeSuccess } from '@/components/Badge'
 import { Card } from '@/components/Card'
+import { isMoreThanDaysAgo } from '@/lib/dateUtils'
+import { FC } from 'react'
 import { DownloadButton } from './DownloadButton'
 import { DownloadThumb } from './DownloadThumb'
-import { DownloadTitle } from './DownloadTitle'
 import { DownloadTimestamp } from './DownloadTimestamp'
-import { DownloadNew } from './DownloadNew'
-import { FC } from 'react'
 
 export interface DownloadItem {
   id?: string
@@ -26,7 +26,7 @@ export const DownloadItem: FC<DownloadItem> = ({
   return (
     <Card data-title={title} data-category={category}>
       <DownloadThumb url={file_url} title={title} thumbUrl={thumb_url} />
-      <DownloadNew date={uploaded_at} />
+      {!isMoreThanDaysAgo(uploaded_at, 5) && <BadgeSuccess>New</BadgeSuccess>}
       <div className="flex items-center gap-2 p-4">
         <div className="flex-grow">
           <h4 className="mb-1 font-bold leading-tight text-gray-900">
