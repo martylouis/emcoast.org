@@ -1,7 +1,7 @@
-import type { NextPage } from 'next'
-import Image from 'next/image'
+/* eslint-disable @next/next/no-img-element */
 import downloads from '../data/downloads.json'
 import { DownloadList } from '@/components/Downloads'
+import type { NextPage } from 'next'
 
 const Home: NextPage = () => {
   return (
@@ -50,7 +50,7 @@ const Home: NextPage = () => {
                   rel="noopener noreferrer"
                   className="block"
                 >
-                  <Image
+                  <img
                     src="/img/zoom-logo-transparent.png"
                     width="140"
                     height="75"
@@ -91,7 +91,7 @@ const Home: NextPage = () => {
                     rel="noopener noreferrer"
                     style={{ width: '135px' }}
                   >
-                    <Image
+                    <img
                       src="/img/download_google.png"
                       alt="download google"
                       width="564"

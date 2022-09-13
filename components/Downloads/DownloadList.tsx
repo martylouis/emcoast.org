@@ -1,5 +1,5 @@
-import { FC } from 'react'
 import { DownloadItem } from './DownloadItem'
+import { FC } from 'react'
 
 interface Props {
   downloads: DownloadItem[]

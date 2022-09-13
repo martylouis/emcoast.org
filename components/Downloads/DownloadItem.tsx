@@ -1,10 +1,10 @@
+import { DownloadButton } from './DownloadButton'
+import { DownloadThumb } from './DownloadThumb'
+import { DownloadTimestamp } from './DownloadTimestamp'
 import { BadgeSuccess } from '@/components/Badge'
 import { Card } from '@/components/Card'
 import { isMoreThanDaysAgo } from '@/lib/dateUtils'
 import { FC } from 'react'
-import { DownloadButton } from './DownloadButton'
-import { DownloadThumb } from './DownloadThumb'
-import { DownloadTimestamp } from './DownloadTimestamp'
 
 export interface DownloadItem {
   id?: string
