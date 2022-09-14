@@ -10,23 +10,23 @@ export interface DownloadItem {
   filename: string
   id?: string
   public_id: string
-  url: string
   tag: string
   thumb_url: string
   title: string
-  uploaded_at: string
   updated_at?: string
+  uploaded_at: string
+  url: string
+  version: string
 }
 
 export const DownloadItem: FC<DownloadItem> = ({
-  id,
-  filename,
-  title,
+  public_id,
   tag,
-  url,
-  thumb_url,
-  uploaded_at,
+  title,
   updated_at,
+  uploaded_at,
+  url,
+  version,
 }) => {
   return (
     <Card
@@ -35,8 +35,17 @@ export const DownloadItem: FC<DownloadItem> = ({
       data-uploaded-at={uploaded_at}
       data-updated-at={updated_at}
     >
-      <DownloadThumb url={url} title={title} thumbUrl={thumb_url} />
-      {!isMoreThanDaysAgo(uploaded_at, 5) && <BadgeSuccess>New</BadgeSuccess>}
+      <DownloadThumb
+        url={url}
+        title={title}
+        public_id={public_id}
+        version={version}
+      />
+      {updated_at
+        ? !isMoreThanDaysAgo(updated_at, 5) && <BadgeSuccess>New</BadgeSuccess>
+        : !isMoreThanDaysAgo(uploaded_at, 5) && (
+            <BadgeSuccess>New</BadgeSuccess>
+          )}
       <div className="flex items-center gap-2 p-4">
         <div className="flex-grow">
           <h4 className="mb-1 font-bold leading-tight text-gray-900">
