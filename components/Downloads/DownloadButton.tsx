@@ -1,5 +1,5 @@
-import { DownloadCloud } from 'react-feather'
 import { DownloadItem } from './DownloadItem'
+import { DownloadCloud } from 'react-feather'
 
 interface DownloadItemProps {
   url: string
@@ -13,7 +13,7 @@ export const DownloadButton = ({
   return (
     <a
       href={url}
-      className="flex items-center justify-center w-full px-4 pl-3 text-sm font-bold leading-none text-white bg-blue-500 rounded shadow-sm h-9 whitespace-nowrap hover:bg-blue-600"
+      className="flex h-9 w-full items-center justify-center whitespace-nowrap rounded bg-blue-500 px-4 pl-3 text-sm font-bold leading-none text-white shadow-sm hover:bg-blue-600"
       rel="noopener noreferrer"
       target="_blank"
       download

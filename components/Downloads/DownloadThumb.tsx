@@ -1,11 +1,18 @@
-/* eslint-disable @next/next/no-img-element */
+import Image from 'next/image'
+
 interface DownloadThumbProps {
   url: string
   title: string
-  thumbUrl: string
+  version: string
+  public_id: string
 }
 
-export const DownloadThumb = ({ url, title, thumbUrl }: DownloadThumbProps) => {
+export const DownloadThumb = ({
+  url,
+  title,
+  version,
+  public_id,
+}: DownloadThumbProps) => {
   return (
     <div className="group relative overflow-hidden border-b border-gray-200 bg-gray-200 pt-4 transition-all duration-200">
       <a
@@ -17,12 +24,13 @@ export const DownloadThumb = ({ url, title, thumbUrl }: DownloadThumbProps) => {
       >
         <div className="px-4">
           <div className="relative h-64 shadow-2xl">
-            <img
-              className="w-full"
+            <Image
+              className="object-cover object-top"
               alt={title}
-              src={thumbUrl}
-              width="300"
-              height="517"
+              src={`/c_thumb,w_400,q_auto:eco/v${version}/${public_id}.jpg`}
+              width="400"
+              height="518"
+              layout="fill"
             />
           </div>
         </div>

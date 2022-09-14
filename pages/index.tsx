@@ -1,15 +1,40 @@
+/* eslint-disable @next/next/no-img-element */
+import { DownloadItem, DownloadList } from '@/components/Downloads'
+import { mapDownloads } from '@/lib/mapDownloads'
+
 import type { NextPage } from 'next'
-import Image from 'next/image'
-import downloads from '../data/downloads.json'
-import { DownloadList } from '@/components/Downloads'
+import { useEffect, useState } from 'react'
 
 const Home: NextPage = () => {
+  const [downloads, setDownloads] = useState<DownloadItem[]>([])
+
+  const fetchDownloads = async () => {
+    const res = await fetch('/api/downloads')
+    const data = await res.json()
+    const mappedDownloads = mapDownloads(data)
+    setDownloads(mappedDownloads)
+  }
+
+  // fetch downloads on mount
+  useEffect(() => {
+    fetchDownloads()
+  }, [])
+
   return (
     <div>
-      <h2>Download Schedules</h2>
-      <div className="grid items-center justify-center gap-8 sm:grid-cols-2">
-        <DownloadList downloads={downloads} category="schedules" />
-      </div>
+      {downloads ? (
+        <>
+          <h2>Download Schedules</h2>
+          <div className="grid items-center justify-center gap-8 sm:grid-cols-2">
+            <DownloadList downloads={downloads} tag="clm" />
+            <DownloadList downloads={downloads} tag="publicTalks" />
+            <DownloadList downloads={downloads} tag="av" />
+            <DownloadList downloads={downloads} tag="cleaning" />
+          </div>
+        </>
+      ) : (
+        <div>Loading...</div>
+      )}
 
       <h2>Meeting Arrangements on Zoom</h2>
       <p>
@@ -50,7 +75,7 @@ const Home: NextPage = () => {
                   rel="noopener noreferrer"
                   className="block"
                 >
-                  <Image
+                  <img
                     src="/img/zoom-logo-transparent.png"
                     width="140"
                     height="75"
@@ -91,7 +116,7 @@ const Home: NextPage = () => {
                     rel="noopener noreferrer"
                     style={{ width: '135px' }}
                   >
-                    <Image
+                    <img
                       src="/img/download_google.png"
                       alt="download google"
                       width="564"
@@ -141,7 +166,8 @@ const Home: NextPage = () => {
           Overseer for more information.
         </p>
         <div className="grid justify-center gap-8 sm:grid-cols-2">
-          <DownloadList downloads={downloads} category="fsg" />
+          <DownloadList downloads={downloads} tag="fsg" />
+          <DownloadList downloads={downloads} tag="fsgMeetings" />
         </div>
       </div>
     </div>
@@ -149,3 +175,29 @@ const Home: NextPage = () => {
 }
 
 export default Home
+
+// export async function getStaticProps() {
+//   const results = await cloudinarySearch({
+//     expression: 'folder="emcoast"',
+//     with_field: ['context', 'tags'],
+//   })
+
+//   const {
+//     resources,
+//     // next_cursor: nextCursor,
+//     // total_count: totalCount,
+//   } = results
+
+//   const downloads = mapDownloads(resources)
+
+//   // const { folders } = await getFolders()
+
+//   return {
+//     props: {
+//       downloads,
+//       resources,
+//       // nextCursor,
+//       // totalCount,
+//     },
+//   }
+// }

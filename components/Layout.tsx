@@ -37,7 +37,7 @@ export default function Layout({ children }: LayoutProps) {
             <a
               href="https://jw.org"
               rel="noreferrer nofollow"
-              className="inline-flex gap-1 font-bold text-gray-700 no-underline border-none"
+              className="inline-flex gap-1 border-none font-bold text-gray-700 no-underline"
             >
               JW.org{' '}
               <span className="self-center">
