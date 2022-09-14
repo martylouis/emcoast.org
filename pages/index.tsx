@@ -175,29 +175,3 @@ const Home: NextPage = () => {
 }
 
 export default Home
-
-// export async function getStaticProps() {
-//   const results = await cloudinarySearch({
-//     expression: 'folder="emcoast"',
-//     with_field: ['context', 'tags'],
-//   })
-
-//   const {
-//     resources,
-//     // next_cursor: nextCursor,
-//     // total_count: totalCount,
-//   } = results
-
-//   const downloads = mapDownloads(resources)
-
-//   // const { folders } = await getFolders()
-
-//   return {
-//     props: {
-//       downloads,
-//       resources,
-//       // nextCursor,
-//       // totalCount,
-//     },
-//   }
-// }
