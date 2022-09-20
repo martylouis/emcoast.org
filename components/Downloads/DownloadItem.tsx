@@ -7,16 +7,16 @@ import { isMoreThanDaysAgo } from '@/lib/dateUtils'
 import { FC } from 'react'
 
 export interface DownloadItem {
-  filename: string
+  filename?: string
   id?: string
-  public_id: string
-  tag: string
-  thumb_url: string
-  title: string
+  public_id?: string
+  tag?: string
+  thumb_url?: string
+  title?: string
   updated_at?: string
-  uploaded_at: string
-  url: string
-  version: string
+  uploaded_at?: any
+  url?: any
+  version?: string
 }
 
 export const DownloadItem: FC<DownloadItem> = ({
@@ -29,12 +29,7 @@ export const DownloadItem: FC<DownloadItem> = ({
   version,
 }) => {
   return (
-    <Card
-      data-title={title}
-      data-tag={tag}
-      data-uploaded-at={uploaded_at}
-      data-updated-at={updated_at}
-    >
+    <Card className="justify-self-center">
       <DownloadThumb
         url={url}
         title={title}

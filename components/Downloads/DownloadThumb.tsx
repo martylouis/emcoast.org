@@ -1,10 +1,11 @@
 import Image from 'next/image'
 
 interface DownloadThumbProps {
-  url: string
-  title: string
-  version: string
-  public_id: string
+  url?: string
+  title?: string
+  version?: string
+  public_id?: string
+  isLoading?: boolean
 }
 
 export const DownloadThumb = ({
@@ -30,7 +31,6 @@ export const DownloadThumb = ({
               src={`/c_thumb,w_400,q_auto:eco/v${version}/${public_id}.jpg`}
               width="400"
               height="518"
-              layout="fill"
             />
           </div>
         </div>
