@@ -1,17 +1,23 @@
-import { DownloadItem } from './DownloadItem'
+import { useFetchDownloads } from '@/hooks/useFetchDownload'
 import { FC } from 'react'
+import { DownloadItem } from './DownloadItem'
+import { DownloadItemLoading } from './DownloadItemLoading'
 
 interface Props {
-  downloads: DownloadItem[]
   tag: string
 }
 
-export const DownloadList: FC<Props> = ({ downloads, tag }) => {
-  const downloadItems = downloads.filter((item) => item.tag === tag)
+export const DownloadList: FC<Props> = ({ tag }) => {
+  const { downloads, isError, isLoading } = useFetchDownloads()
+  const downloadItems = downloads.filter(
+    (item: DownloadItem) => item.tag === tag
+  )
+  if (isLoading) return <DownloadItemLoading />
+  if (isError) return <div>Error!</div>
   return (
     <>
       {downloadItems.map(
-        ({ id, ...props }, index) =>
+        ({ id, ...props }: { id: string }, index: number) =>
           index === 0 && <DownloadItem key={id} {...props} />
       )}
     </>
