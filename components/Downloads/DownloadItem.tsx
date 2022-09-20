@@ -29,7 +29,7 @@ export const DownloadItem: FC<DownloadItem> = ({
   version,
 }) => {
   return (
-    <Card>
+    <Card className="justify-self-center">
       <DownloadThumb
         url={url}
         title={title}

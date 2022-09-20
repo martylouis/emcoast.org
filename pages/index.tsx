@@ -6,7 +6,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <h2>Download Schedules</h2>
-      <div className="grid items-center justify-center gap-8 sm:grid-cols-2">
+      <div className="my-8 grid items-center gap-4 sm:grid-cols-2 md:gap-8">
         <DownloadList tag="clm" />
         <DownloadList tag="publicTalks" />
         <DownloadList tag="av" />
@@ -142,9 +142,11 @@ const Home: NextPage = () => {
           in-person field service meetings. Please see your Field Service Group
           Overseer for more information.
         </p>
-        <div className="grid justify-center gap-8 sm:grid-cols-2">
-          <DownloadList tag="fsg" />
-          <DownloadList tag="fsgMeetings" />
+        <div>
+          <div className="my-8 grid justify-center gap-8 sm:grid-cols-2">
+            <DownloadList tag="fsg" />
+            <DownloadList tag="fsgMeetings" />
+          </div>
         </div>
       </div>
     </div>
