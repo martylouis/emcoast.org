@@ -6,9 +6,7 @@ export const mapDownloads = (downloads: any) => {
       id: resource.asset_id,
       public_id,
       tag: resource.tags[0],
-      title: resource.context.caption,
       uploaded_at,
-      updated_at: resource.context.updated_at,
       url: resource.secure_url,
       version,
     }

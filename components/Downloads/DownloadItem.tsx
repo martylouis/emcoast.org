@@ -1,10 +1,26 @@
-import { DownloadButton } from './DownloadButton'
-import { DownloadThumb } from './DownloadThumb'
-import { DownloadTimestamp } from './DownloadTimestamp'
 import { BadgeSuccess } from '@/components/Badge'
 import { Card } from '@/components/Card'
 import { isMoreThanDaysAgo } from '@/lib/dateUtils'
 import { FC } from 'react'
+import { DownloadButton } from './DownloadButton'
+import { DownloadThumb } from './DownloadThumb'
+import { DownloadTimestamp } from './DownloadTimestamp'
+
+// generate types to the titles object
+// and use them in the DownloadItem component
+
+type Titles = {
+  [key: string]: string
+}
+
+const titles: Titles = {
+  clm: 'Midweek Meeting',
+  publicTalks: 'Public Talks',
+  av: 'A/V & Attendant',
+  cleaning: 'Cleaning',
+  fsg: 'Field Service Groups',
+  fsgMeetings: 'Field Service Meetings',
+}
 
 export interface DownloadItem {
   filename?: string
@@ -12,7 +28,6 @@ export interface DownloadItem {
   public_id?: string
   tag?: string
   thumb_url?: string
-  title?: string
   updated_at?: string
   uploaded_at?: any
   url?: any
@@ -22,7 +37,6 @@ export interface DownloadItem {
 export const DownloadItem: FC<DownloadItem> = ({
   public_id,
   tag,
-  title,
   updated_at,
   uploaded_at,
   url,
@@ -32,7 +46,7 @@ export const DownloadItem: FC<DownloadItem> = ({
     <Card className="justify-self-center">
       <DownloadThumb
         url={url}
-        title={title}
+        title={tag && titles[tag]}
         public_id={public_id}
         version={version}
       />
@@ -44,7 +58,7 @@ export const DownloadItem: FC<DownloadItem> = ({
       <div className="flex items-center gap-2 p-4">
         <div className="flex-grow">
           <h4 className="mb-1 font-bold leading-tight text-gray-900">
-            {title}
+            {tag && titles[tag]}
           </h4>
           {updated_at ? (
             <DownloadTimestamp date={updated_at} />
